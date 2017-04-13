@@ -1,5 +1,5 @@
-![image](/timebusker/spring-boot/raw/master/static/logo.png)
-![image](/timebusker/spring-boot/raw/master/static/spring-boot.png)
+![image](/timebusker/spring-boot/raw/master/static/logo.png?raw=true)
+![image](/timebusker/spring-boot/raw/master/static/spring-boot.png?raw=true)
 开发运行环境：eclipse、JDK1.8				   
 					   
 第一个项目：spring-boot-1-QuickStart spring boot的入门程序
