@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.timebusker</groupId>
+	<artifactId>spring-boot</artifactId>
+	<version>2.0.0</version>
+	<packaging>pom</packaging>
+	<name>spring-boot</name>
+	<description>spring-boot学习使用总结</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.2.RELEASE</version>
+	</parent>
+
+	<!-- 全局依赖设置：引入依赖会自动传递到子模块中 -->
+	<dependencies>
+		<!-- Spring Boot 核心三个模块 START -->
+		<!-- 核心模块，包括自动配置支持、日志和YAML -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<!-- spring-boot-starter-test：测试模块，包括JUnit、Hamcrest、Mockito -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- 引入Web模块，需添加spring-boot-starter-web模块： -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!-- END -->
+		<!-- 排除Tomcat,使用jetty -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jetty</artifactId>
+		</dependency>
+		<!-- devtools：是spring boot的一个热部署工具 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.31</version>
+		</dependency>
+	</dependencies>
+
+	<!-- 全局依赖管理：引入依赖不会自动传递到子模块中，子模块中需要申明依赖；重要用于依赖版本管理 -->
+	<dependencyManagement>
+
+	</dependencyManagement>
+
+
+	<build>
+		<finalName>spring-boot</finalName>
+		<!-- spring-boot-maven-plugin 提供了许多非常便捷的插件，它可以在classpath下收集很多的JAR包， 并能够建立一个独立可运行的JAR包，这让他能够非常方便的运行你的系统服务。 
+			spring-boot-maven-plugin插件 搜索public static void main()方法标记为可运行的类。它提供内置的依赖解析器，用于设置版本号匹配Spring引导依赖。 
+			你可以覆盖任何你想要的版本，但是它将默认为Boot的所选版本集 -->
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<!-- 源代码使用的开发版本 -->
+					<source>1.8</source>
+					<!-- 需要生成的目标class文件的编译版本 -->
+					<target>1.8</target>
+					<!-- 一般而言，target与source是保持一致的，但是，有时候为了让程序能在其他版本的jdk中运行(对于低版本目标jdk，源代码中需要没有使用低版本jdk中不支持的语法)，会存在target不同于source的情况 -->
+					<!-- 可选项 -->
+					<meminitial>128m</meminitial>
+					<maxmem>512m</maxmem>
+					<!-- fork is enable,用于明确表示编译版本配置的可用 -->
+					<fork>true</fork>
+					<compilerVersion>1.3</compilerVersion>
+					<encoding>UTF-8</encoding>
+					<!-- 这个选项用来传递编译器自身不包含但是却支持的参数选项 -->
+					<compilerArgument>-verbose -bootclasspath ${java.home}\lib\rt.jar</compilerArgument>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>
+		<module>spring-boot-1-QuickStart</module>
+	</modules>
+</project>
