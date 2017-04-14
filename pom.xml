@@ -17,51 +17,17 @@
 
 	<!-- 全局依赖设置：引入依赖会自动传递到子模块中 -->
 	<dependencies>
-		<!-- Spring Boot 核心三个模块 START -->
-		<!-- 核心模块，包括自动配置支持、日志和YAML -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-		<!-- spring-boot-starter-test：测试模块，包括JUnit、Hamcrest、Mockito -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- 引入Web模块，需添加spring-boot-starter-web模块： -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<!-- END -->
-		<!-- 排除Tomcat,使用jetty -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jetty</artifactId>
-		</dependency>
-		<!-- devtools：是spring boot的一个热部署工具 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.31</version>
-		</dependency>
 	</dependencies>
 
 	<!-- 全局依赖管理：引入依赖不会自动传递到子模块中，子模块中需要申明依赖；重要用于依赖版本管理 -->
 	<dependencyManagement>
-
+		<dependencies>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>1.2.31</version>
+			</dependency>
+		</dependencies>
 	</dependencyManagement>
 
 
@@ -102,5 +68,6 @@
 	</build>
 	<modules>
 		<module>spring-boot-1-QuickStart</module>
+		<module>spring-boot-2-RESTful</module>
 	</modules>
 </project>
