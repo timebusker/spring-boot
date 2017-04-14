@@ -1,6 +1,6 @@
 ----
 ## [spring boot的入门程序](https://github.com/timebusker/spring-boot/tree/master/spring-boot-1-QuickStart/)
-----
+
 ### 项目阐述
  ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-1-QuickStart/app-main.png?raw=true)
  
@@ -14,3 +14,6 @@
 		 
    * 自定义属性加载         
          需要使用@Component注解将类注册到容器内就可以方便使用
+		 
+		 
+----
