@@ -1,6 +1,4 @@
-# &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;SPRING BOOT PRACTICE
-![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot.png?raw=true)
-
+----
 ## [spring boot的入门程序](https://github.com/timebusker/spring-boot/tree/master/spring-boot-1-QuickStart/)
 ----
 ### 项目阐述
