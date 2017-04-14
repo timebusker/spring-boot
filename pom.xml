@@ -12,7 +12,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.2.RELEASE</version>
+		<version>1.4.5.RELEASE</version>
 	</parent>
 
 	<!-- 全局依赖设置：引入依赖会自动传递到子模块中 -->
