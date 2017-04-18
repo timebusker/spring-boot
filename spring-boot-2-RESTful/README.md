@@ -1,7 +1,7 @@
 ----
 ## [spring-boot-2-RESTful spring boot完美支持RESTful API](https://github.com/timebusker/spring-boot/tree/master/spring-boot-2-RESTful/)
 
-### 项目阐述
+### 项目阐述——深入理解RESTful架构、设计合理的URL
    ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-2-RESTful/restful-api.png?raw=true)
  
  + 理解RESTful架构</br>
