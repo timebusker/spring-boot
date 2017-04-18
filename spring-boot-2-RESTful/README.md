@@ -6,10 +6,10 @@
  
  + 理解RESTful架构
    * [正确理解RESTful架构](http://note.youdao.com/share/?id=10ab604134fda6249816c6a718a58c93&type=note#/)
-     ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-2-RESTful/get.png?raw=true =100x50)
-	 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-2-RESTful/post.png?raw=true =100x50)
-	 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-2-RESTful/put.png?raw=true =100x50)</br>
-	 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-2-RESTful/delete.png?raw=true =100x50)</br>
+     ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-2-RESTful/get.png?raw=true)
+	 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-2-RESTful/post.png?raw=true)
+	 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-2-RESTful/put.png?raw=true)</br>
+	 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-2-RESTful/delete.png?raw=true)
    
  + RESTful架构实现</br>
     * GET 请求</br>
