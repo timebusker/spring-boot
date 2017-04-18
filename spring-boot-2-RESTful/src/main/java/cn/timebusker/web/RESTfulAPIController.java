@@ -28,7 +28,7 @@ public class RESTfulAPIController {
 	 * DELETE（DELETE）：从服务器删除资源。
 	 */
 
-	@RequestMapping(value = { "/add" }, method = RequestMethod.POST)
+	@RequestMapping(value = { "/demo" }, method = RequestMethod.POST)
 	public List<DemoInfo> addDemoInfo(@ModelAttribute DemoInfo demo) {
 		// POST请求，用来创建DemoInfo
 		// 除了@ModelAttribute绑定参数之外，还可以通过@RequestParam从页面中传递参数
@@ -36,7 +36,7 @@ public class RESTfulAPIController {
 		return service.insertDemoInfo(demo);
 	}
 
-	@RequestMapping(value = { "/insert" }, method = RequestMethod.POST)
+	@RequestMapping(value = { "/demo-requestParam" }, method = RequestMethod.POST)
 	public List<DemoInfo> insertDemoInfo(@RequestParam("id") String id, @RequestParam("name") String name, @RequestParam("description") String description) {
 		// POST请求，用来创建DemoInfo
 		// 除了@ModelAttribute绑定参数之外，还可以通过@RequestParam从页面中传递参数
@@ -48,14 +48,14 @@ public class RESTfulAPIController {
 		return service.insertDemoInfo(demo);
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/demo/{id}", method = RequestMethod.GET)
 	public DemoInfo findDemoInfo(@PathVariable String id) {
 		// GET请求，用来获取信息
 		// url中的id可通过@PathVariable绑定到函数的参数中
 		return service.findDemoInfo(id);
 	}
 
-	@RequestMapping(value = "/update/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/demo/{id}", method = RequestMethod.PUT)
 	public List<DemoInfo> updateDemoInfo(@PathVariable String id) {
 		// PUT请求，用来更新信息
 		DemoInfo demo = new DemoInfo();
@@ -65,7 +65,7 @@ public class RESTfulAPIController {
 		return service.updateDemoInfo(demo);
 	}
 
-	@RequestMapping(value = "/del/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/demo/{id}", method = RequestMethod.DELETE)
 	public List<DemoInfo> deleteDemoInfo(@PathVariable String id) {
 		// DELETE请求，用来删除信息
 		DemoInfo demo = new DemoInfo();
@@ -73,7 +73,7 @@ public class RESTfulAPIController {
 		return service.deleteDemoInfo(demo);
 	}
 
-	@RequestMapping(value = { "/all", "/" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/demos", "/" }, method = RequestMethod.GET)
 	public List<DemoInfo> findAll() {
 		// GET请求，用来获取信息
 		return service.findAll();
