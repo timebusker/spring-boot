@@ -1,7 +1,7 @@
 ----
 ## [spring boot的入门程序](https://github.com/timebusker/spring-boot/tree/master/spring-boot-1-QuickStart/)
 
-### 项目阐述
+### 项目阐述--实现多环境属性配置、自定义属性加载、排除默认日志框架和Tomcat容器、快速搭建spring boot web项目
  ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-1-QuickStart/app-main.png?raw=true)
  
  + spring-boot快速入门
