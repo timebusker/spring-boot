@@ -21,6 +21,13 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<!-- 排除默认日志框架 -->
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!-- spring-boot-starter-test：测试模块，包括JUnit、Hamcrest、Mockito -->
 		<dependency>
@@ -33,6 +40,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<exclusions>
+				<!-- 排除默认容器Tomcat -->
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-tomcat</artifactId>
@@ -52,9 +60,9 @@
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<finalName>spring-boot-1-QuickStart</finalName>
 	</build>
-	
+
 </project>
