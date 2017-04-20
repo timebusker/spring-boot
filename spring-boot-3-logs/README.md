@@ -10,17 +10,17 @@
    * Log4j配置信息
    * 配置多环境不同日志级别
 	 
- + #### [spring-boot 整合Log4j2](#)
+ + #### [spring-boot 整合Log4j2](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-Log4j2/)
    * Log4j2配置说明
    * Log4j2配置信息
    * 配置多环境不同日志级别
    
- + #### [spring-boot 整合Logback](#)
+ + #### [spring-boot 整合Logback](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-Logback/)
    * Log4j2配置说明
    * Log4j2配置信息
    * 配置多环境不同日志级别
    
- + #### [spring-boot 整合SLF4J](#)
+ + #### [spring-boot 整合SLF4J](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-SLF4J/)
    * Log4j2配置说明
    * Log4j2配置信息
    * 配置多环境不同日志级别

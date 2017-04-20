@@ -35,8 +35,7 @@
 	  ```xml
 	  <?xml version="1.0" encoding="UTF-8"?>
 	  <!--日志级别以及优先级排序: OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
-	  <!--Configuration后面的status，这个用于设置log4j2自身内部的信息输出，可以不设置，
-	  当设置成trace时，你会看到log4j2内部各种详细输出 -->
+	  <!--Configuration后面的status，这个用于设置log4j2自身内部的信息输出，可以不设置，当设置成trace时，你会看到log4j2内部各种详细输出 -->
 	  <!--monitorInterval：Log4j能够自动检测修改配置 文件和重新配置本身，设置间隔秒数 -->
 	  <configuration status="WARN" monitorInterval="30">
 		  <!--先定义所有的appender -->
@@ -50,15 +49,13 @@
 			  <File name="log" fileName="logs/test.log" append="false">
 			  	<PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n" />
 			  </File>
-			  <!-- 这个会打印出所有的info及以下级别的信息，每次大小超过size，则这size大小的日志会自动存入
-			  按年份-月份建立的文件夹下面并进行压缩，作为存档 -->
+			  <!-- 这个会打印出所有的info及以下级别的信息，每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档 -->
 			  <RollingFile name="RollingFileInfo" fileName="logs/info.log" filePattern="${sys:user.home}/logs/$${date:yyyy-MM}/info-%d{yyyy-MM-dd}-%i.log">
 		  		<!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch） -->
 		  		<ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY" />
 		  		<PatternLayout pattern="[%d{HH:mm:ss:SSS}] [%p] - %l - %m%n" />
 			  	<Policies>
-			  		<!-- 基于时间的触发策略。该策略主要是完成周期性的log文件封存工作 interval，integer型，
-					指定两次封存动作之间的时间间隔;modulate，boolean型，说明是否对封存时间进行调制 -->
+			  		<!-- 基于时间的触发策略。该策略主要是完成周期性的log文件封存工作 interval，integer型，指定两次封存动作之间的时间间隔;modulate，boolean型，说明是否对封存时间进行调制 -->
 			  		<TimeBasedTriggeringPolicy interval="4" modulate="true"/>
 			  		<SizeBasedTriggeringPolicy size="100 MB" />
 			  	</Policies>
