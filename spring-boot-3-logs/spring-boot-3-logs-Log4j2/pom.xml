@@ -58,7 +58,6 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-
 		<!-- 引入log4j2依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
