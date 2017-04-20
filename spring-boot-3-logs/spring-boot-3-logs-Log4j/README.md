@@ -1,5 +1,5 @@
 ----
-## [spring-boot-3-logs-Log4j spring boot 集成Log4j日志框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs-Log4j/)
+## [spring-boot-3-logs-Log4j spring boot 集成Log4j日志框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-Log4j/)
 
 ### 项目阐述
    ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/spring-boot-3-logs-Log4j/Log4j.png?raw=true)
