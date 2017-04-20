@@ -69,5 +69,6 @@
 	<modules>
 		<module>spring-boot-1-QuickStart</module>
 		<module>spring-boot-2-RESTful</module>
+		<module>spring-boot-3-logs</module>
 	</modules>
 </project>
