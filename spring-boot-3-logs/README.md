@@ -17,8 +17,8 @@
    * 配置多环境不同日志级别
    
  + #### [spring-boot 整合Logback](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-Logback/)
-   * Log4j2配置说明
-   * Log4j2配置信息
+   * spring boot 1.4.X默认日志框架为 SLF4J+Logback
+   * Logback 配置信息
    * 配置多环境不同日志级别
 		 
 ----
