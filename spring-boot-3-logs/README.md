@@ -20,11 +20,6 @@
    * Log4j2配置说明
    * Log4j2配置信息
    * 配置多环境不同日志级别
-   
- + #### [spring-boot 整合SLF4J](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-SLF4J/)
-   * Log4j2配置说明
-   * Log4j2配置信息
-   * 配置多环境不同日志级别
 		 
 ----
 
