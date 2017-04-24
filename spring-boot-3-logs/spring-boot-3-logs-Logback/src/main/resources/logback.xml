@@ -1,19 +1,6 @@
-----
-## [spring-boot-3-logs-Logback 集成Logback日志框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-Logback/)
-
-### 项目阐述
-   ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/spring-boot-3-logs-Logback/Logback.png?raw=true)
- 
- + #### Log4j配置说明
-   * [logback日志分开纪录](http://www.cnblogs.com/DeepLearing/p/5664941.html)</br>
-   * [logback节点配置详解](http://www.cnblogs.com/DeepLearing/p/5663178.html)
-   * [logback 中文手册.pdf](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/spring-boot-3-logs-Logback/logback 中文手册.pdf?raw=true)
-	
- + #### 配置多环境不同日志级别
-	  ***logback.xml*配置讲解**
-	  ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
+
 	<!-- 文件输出格式 -->
 	<property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
 	<!-- test文件路径 -->
@@ -72,6 +59,3 @@
 		</root>
 	</springProfile>
 </configuration>
-	  ```
-	
-----

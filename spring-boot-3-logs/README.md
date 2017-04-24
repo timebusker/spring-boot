@@ -26,3 +26,8 @@
    * 配置多环境不同日志级别
 		 
 ----
+
+### 相关文章
+ - [混乱的 Java 日志体系](http://note.youdao.com/noteshare?id=8ee5d113de15c2bee1d36be76dddd717)
+ - [为什么要使用SLF4J而不是Log4J](http://note.youdao.com/noteshare?id=f47db61d63b5254c76cd9404ef5c83e6)
+ - [在 Web 应用中增加用户跟踪功能——学习在多线程环境下 Apache Log4j 的 NDC和MDC 开发](http://note.youdao.com/noteshare?id=9e15b0c68bedf37147965b213203de99)
