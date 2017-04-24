@@ -14,7 +14,6 @@
 	<description>spring-boot整合多个Java日志框架</description>
 	
 	<modules>
-		<module>spring-boot-3-logs-SLF4J</module>
 		<module>spring-boot-3-logs-Log4j</module>
 		<module>spring-boot-3-logs-Logback</module>
 		<module>spring-boot-3-logs-Log4j2</module>
