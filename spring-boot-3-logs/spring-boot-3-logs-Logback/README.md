@@ -11,7 +11,7 @@
 	
  + #### 配置多环境不同日志级别
 	  ***logback.xml*配置讲解**
-	  ```xml
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 	<!-- 文件输出格式 -->
@@ -72,6 +72,6 @@
 		</root>
 	</springProfile>
 </configuration>
-	  ```
+```
 	
 ----
