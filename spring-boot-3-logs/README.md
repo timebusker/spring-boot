@@ -1,6 +1,9 @@
 ----
 ## [spring-boot-3-logs spring boot 整合多个日志框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/)
 
+## 良好日志架构：SLF4J + Log4j/Log4j2/Logback  
+## 良好日志架构：日志性能比较：Log4j < Logback < Log4j2
+
 ### 项目阐述——spring boot 整合多个日志框架：Log4j、Log4j2、SLF4J、Logback
    ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/logging.png?raw=true)
    ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/SLF4J.png?raw=true)
