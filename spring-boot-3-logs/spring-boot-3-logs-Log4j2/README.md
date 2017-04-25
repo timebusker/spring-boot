@@ -4,7 +4,7 @@
 ### 项目阐述
    ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/spring-boot-3-logs-Log4j2/Log4j2.png?raw=true)
  
- + #### Log4j2配置说明
+ + #### SLF4J+Log4j2配置说明
     * [配置Log4j2 教程](http://www.cnblogs.com/leo-lsw/p/log4j2tutorial.html)
     * [Log4j2 使用总结](http://blog.csdn.net/jiangguilong2000/article/details/11397557)
 	* [聊一聊log4j2配置文件log4j2.xml](http://www.cnblogs.com/hafiz/p/6170702.html)

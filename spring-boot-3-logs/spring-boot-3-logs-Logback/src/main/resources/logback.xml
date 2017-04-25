@@ -4,9 +4,9 @@
 	<!-- 文件输出格式 -->
 	<property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
 	<!-- test文件路径 -->
-	<property name="TEST_FILE_PATH" value="c:/logs/test.log" />
+	<property name="TEST_FILE_PATH" value="/logs/test.log" />
 	<!-- pro文件路径 -->
-	<property name="PRO_FILE_PATH" value="c:/logs/prod.log" />
+	<property name="PRO_FILE_PATH" value="/logs/prod.log" />
 
 	<!-- 开发环境 -->
 	<springProfile name="dev">

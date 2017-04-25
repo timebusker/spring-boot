@@ -4,7 +4,7 @@
 ### 项目阐述
    ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/spring-boot-3-logs-Log4j/Log4j.png?raw=true)
  
- + #### Log4j配置说明
+ + #### SLF4J+Log4j配置说明
    * [配置Log4j](http://note.youdao.com/share/?id=01bc7e875753bdef14ed9609027ab0a7&type=note#/)</br>
    * [Log4j 详细配置](http://blog.csdn.net/azheng270/article/details/2173430/)</br>
  
