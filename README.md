@@ -9,4 +9,6 @@
 
 ### 第三个项目：[spring-boot-3-logs 整合多个日志框架：Log4j、Log4j2、Logback](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/)
 
+### 第四个项目：[spring-boot-4-Scheduled 使用定时任务](https://github.com/timebusker/spring-boot/tree/master/spring-boot-4-Scheduled/)
+
 ----
