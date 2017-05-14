@@ -43,7 +43,7 @@
 	  Scheduler 主要有三种：RemoteMBeanScheduler， RemoteScheduler 和 StdScheduler。
 	  本项目以最常用的 StdScheduler 为例讲解。
 	  
-	 * **Quartz 使用—— 引入核心依赖**:
+* **Quartz 使用—— 引入核心依赖**:
 ```
 <!-- 添加Quartz依赖 -->
 <dependency>
@@ -58,7 +58,7 @@
       + 使用spring task不需要引用额外的jar包，spring-core中已经完成封装
 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast.png?raw=true)
 	   
-	  + 核心代码如下：
++ 核心代码如下：
 ```
 package cn.timebusker.springTask;
 
