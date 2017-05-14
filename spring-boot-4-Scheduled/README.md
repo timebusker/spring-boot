@@ -51,7 +51,7 @@
 	<version>2.3.0</version>
 </dependency>
 ```
-		### [关于spring整合 quartz 项目示例](https://github.com/timebusker/Synthesis/tree/master/Synthesis-spring-quartz/)
+#### [关于spring整合 quartz 项目示例](https://github.com/timebusker/Synthesis/tree/master/Synthesis-spring-quartz/)
 
 - #### Spring Task 简单使用、动态修改cron表达式、动态添加修改删除定时任务
 
