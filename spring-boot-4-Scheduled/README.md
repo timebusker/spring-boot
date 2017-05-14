@@ -1,4 +1,3 @@
-	----
 ## [spring-boot-4-Scheduled spring boot 使用定时任务](https://github.com/timebusker/spring-boot/tree/master/spring-boot-4-Scheduled/)
 
 ### - 定时任务的几种实现方式
@@ -37,9 +36,10 @@
 	  表示在没有 trigger 关联的时候任务是否被保留。两者都是在值为 true 的时候任务被持久化或保留。一个 job 可以被多个
 	  trigger 关联，但是一个 trigger 只能关联一个 job。
 
-      在 Quartz 中， scheduler 由 scheduler 工厂创建：DirectSchedulerFactory 或者 StdSchedulerFactory。 
-	  第二种工厂 StdSchedulerFactory 使用较多，因为 DirectSchedulerFactory 使用起来不够方便，需要作许多详细的手工编码设置。 
-	  Scheduler 主要有三种：RemoteMBeanScheduler， RemoteScheduler 和 StdScheduler。本项目以最常用的 StdScheduler 为例讲解。
+      在 Quartz 中， scheduler 由 scheduler 工厂创建：DirectSchedulerFactory 或者 StdSchedulerFactory。第二种工厂 
+	  StdSchedulerFactory 使用较多，因为 DirectSchedulerFactory 使用起来不够方便，需要作许多详细的手工编码设置。 
+	  Scheduler 主要有三种：RemoteMBeanScheduler， RemoteScheduler 和 StdScheduler。
+	  本项目以最常用的 StdScheduler 为例讲解。
 	  
 	  + Quartz 使用
 	    * 引入核心依赖:
@@ -56,7 +56,7 @@
 - #### Spring Task 简单使用、动态修改cron表达式、动态添加修改删除定时任务
 
        + 使用spring task不需要引用额外的jar包，spring-core中已经完成封装
-	     ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast.png?raw=true)
+![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast.png?raw=true)
 	   
 	   + 核心代码如下：
 ```
@@ -91,7 +91,7 @@ public class SpringTaskSample {
 ```
      
 	   + spring task 在计算时间的时候，是根据当前服务器的系统时间进行计算,运行效果图如下图所示：
-	     ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast-res.png?raw=true)
+![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast-res.png?raw=true)
 		 
 	   + Spring的Scheduled Task实现集群思路
 	     实现任务互斥，通过声明***全局锁***作为互斥变量，获得锁的变量才有权执行任务。
