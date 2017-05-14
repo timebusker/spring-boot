@@ -1,6 +1,6 @@
 ## [spring-boot-4-Scheduled spring boot 使用定时任务](https://github.com/timebusker/spring-boot/tree/master/spring-boot-4-Scheduled/)
 
-- ### 定时任务的几种实现方式
+### 定时任务的几种实现方式
      + Timer：Java自带的java.util.Timer类，这个类允许你调度一个java.util.TimerTask任务。
 	           使用这种方式可以让你的程序按照某一个频度执行，但不能在指定时间运行。一般用的较少。
 
@@ -9,6 +9,7 @@
      + Spring Task：Spring3.0以后自带的task，可以将它看成一个轻量级的Quartz，而且使用起来比Quartz简单许多，支持固定时间
 	            (支持cron表达式)和固定时间间隔调度任务，支持线程池管理。
   
+#### [关于spring整合 quartz 项目示例](https://github.com/timebusker/Synthesis/tree/master/Synthesis-spring-quartz/)
 
 ### 本案例主要讲解 Quartz 和 Spring Task 的使用和技巧
 
@@ -25,7 +26,8 @@
 		
 	 * Quartz任务调度基本实现原理：
 	  
-	  Quartz 任务调度的核心元素是scheduler,trigger和job其中trigger和job是任务调度的元数据，scheduler是实际执行调度的控制器。
+	  Quartz 任务调度的核心元素是scheduler,trigger和job。
+	  其中trigger和job是任务调度的元数据，scheduler是实际执行调度的控制器。
 	  
 	  在 Quartz 中，trigger 是用于定义调度时间的元素，即按照什么时间规则去执行任务。Quartz 中主要提供了四种类型的 
 	  trigger：SimpleTrigger，CronTirgger，DateIntervalTrigger，和 NthIncludedDayTrigger。
@@ -52,7 +54,6 @@
 	<version>2.3.0</version>
 </dependency>
 ```
-#### [关于spring整合 quartz 项目示例](https://github.com/timebusker/Synthesis/tree/master/Synthesis-spring-quartz/)
 
 - #### Spring Task 简单使用、动态修改cron表达式、动态添加修改删除定时任务
 
