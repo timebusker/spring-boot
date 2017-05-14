@@ -43,14 +43,14 @@
 	  
 	  + Quartz 使用
 	    * 引入核心依赖:
-		  ```xml
-		<!-- 添加Quartz依赖 -->
-		<dependency>
-			<groupId>org.quartz-scheduler</groupId>
-			<artifactId>quartz</artifactId>
-			<version>2.3.0</version>
-		</dependency>
-		  ```
+```
+<!-- 添加Quartz依赖 -->
+<dependency>
+	<groupId>org.quartz-scheduler</groupId>
+	<artifactId>quartz</artifactId>
+	<version>2.3.0</version>
+</dependency>
+```
 		### [关于spring整合 quartz 项目示例](https://github.com/timebusker/Synthesis/tree/master/Synthesis-spring-quartz/)
 
 - #### Spring Task 简单使用、动态修改cron表达式、动态添加修改删除定时任务
@@ -59,7 +59,7 @@
 	     ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast.png?raw=true)
 	   
 	   + 核心代码如下：
-	      ```
+```
 package cn.timebusker.springTask;
 
 import java.util.Date;
@@ -88,7 +88,7 @@ public class SpringTaskSample {
 		System.out.println(getClass()+ "----task2" + new Date());
 	}
 }
-		  ```
+```
      
 	   + spring task 在计算时间的时候，是根据当前服务器的系统时间进行计算,运行效果图如下图所示：
 	     ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast-res.png?raw=true)
