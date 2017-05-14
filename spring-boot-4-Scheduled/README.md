@@ -1,12 +1,12 @@
 ## [spring-boot-4-Scheduled spring boot 使用定时任务](https://github.com/timebusker/spring-boot/tree/master/spring-boot-4-Scheduled/)
 
 ### 定时任务的几种实现方式
-     + Timer：Java自带的java.util.Timer类，这个类允许你调度一个java.util.TimerTask任务。
+    - Timer：Java自带的java.util.Timer类，这个类允许你调度一个java.util.TimerTask任务。
 	           使用这种方式可以让你的程序按照某一个频度执行，但不能在指定时间运行。一般用的较少。
 
-     + Quartz：是一个功能完善的任务调度框架，它支持集群环境下的任务调度，需要将任务调度状态序列化到数据库。。
+    - Quartz：是一个功能完善的任务调度框架，它支持集群环境下的任务调度，需要将任务调度状态序列化到数据库。。
 
-     + Spring Task：Spring3.0以后自带的task，可以将它看成一个轻量级的Quartz，而且使用起来比Quartz简单许多，支持固定时间
+    - Spring Task：Spring3.0以后自带的task，可以将它看成一个轻量级的Quartz，而且使用起来比Quartz简单许多，支持固定时间
 	            (支持cron表达式)和固定时间间隔调度任务，支持线程池管理。
   
 #### [关于spring整合 quartz 项目示例](https://github.com/timebusker/Synthesis/tree/master/Synthesis-spring-quartz/)
@@ -57,10 +57,10 @@
 
 - #### Spring Task 简单使用、动态修改cron表达式、动态添加修改删除定时任务
 
-       + 使用spring task不需要引用额外的jar包，spring-core中已经完成封装
+      + 使用spring task不需要引用额外的jar包，spring-core中已经完成封装
 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast.png?raw=true)
 	   
-	   + 核心代码如下：
+	  + 核心代码如下：
 ```
 package cn.timebusker.springTask;
 
@@ -92,10 +92,10 @@ public class SpringTaskSample {
 }
 ```
      
-	   + spring task 在计算时间的时候，是根据当前服务器的系统时间进行计算,运行效果图如下图所示：
+	  + spring task 在计算时间的时候，是根据当前服务器的系统时间进行计算,运行效果图如下图所示：
 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast-res.png?raw=true)
 		 
-	   + Spring的Scheduled Task实现集群思路
+	  + Spring的Scheduled Task实现集群思路
 	     实现任务互斥，通过声明***全局锁***作为互斥变量，获得锁的变量才有权执行任务。
 
 
