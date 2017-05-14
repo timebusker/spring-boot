@@ -1,6 +1,6 @@
 ## [spring-boot-4-Scheduled spring boot 使用定时任务](https://github.com/timebusker/spring-boot/tree/master/spring-boot-4-Scheduled/)
 
-### - 定时任务的几种实现方式
+- ### 定时任务的几种实现方式
       + Timer：Java自带的java.util.Timer类，这个类允许你调度一个java.util.TimerTask任务。
 	           使用这种方式可以让你的程序按照某一个频度执行，但不能在指定时间运行。一般用的较少。
 
@@ -12,8 +12,8 @@
 
 ### 本案例主要讲解 Quartz 和 Spring Task 的使用和技巧
 
-#### - Quartz 介绍及使用技巧
-       + Quartz框架需要10多张表协同，配置繁多，它完全由Java编写的开源作业调度框架，为在Java应用程序中进行作业调度提供了
+- ### Quartz 介绍及使用技巧
+     + Quartz框架需要10多张表协同，配置繁多，它完全由Java编写的开源作业调度框架，为在Java应用程序中进行作业调度提供了
 	   简单却强大的机制。Quartz允许开发人员根据时间间隔来调度作业。它实现了作业和触发器的多对多的关系，还能把多个作业与
 	   不同的触发器关联，具有分布式和集群能力。
 
@@ -24,6 +24,7 @@
 	    misfire：   错过的，指本来应该被执行但实际没有被执行的任务调度
 		
 	 + Quartz任务调度基本实现原理：
+	  
 	  Quartz 任务调度的核心元素是scheduler,trigger和job其中trigger和job是任务调度的元数据，scheduler是实际执行调度的控制器。
 	  
 	  在 Quartz 中，trigger 是用于定义调度时间的元素，即按照什么时间规则去执行任务。Quartz 中主要提供了四种类型的 
@@ -41,8 +42,8 @@
 	  Scheduler 主要有三种：RemoteMBeanScheduler， RemoteScheduler 和 StdScheduler。
 	  本项目以最常用的 StdScheduler 为例讲解。
 	  
-	  + Quartz 使用
-	    * 引入核心依赖:
+	 + Quartz 使用
+	   引入核心依赖:
 ```
 <!-- 添加Quartz依赖 -->
 <dependency>
