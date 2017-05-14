@@ -51,9 +51,9 @@
 			<version>2.3.0</version>
 		</dependency>
 		  ```
-		* [关于spring整合 quartz 项目示例](https://github.com/timebusker/Synthesis/tree/master/Synthesis-spring-quartz/)
+		### [关于spring整合 quartz 项目示例](https://github.com/timebusker/Synthesis/tree/master/Synthesis-spring-quartz/)
 
-#### - Spring Task 简单使用、动态修改cron表达式、动态添加修改删除定时任务
+- #### Spring Task 简单使用、动态修改cron表达式、动态添加修改删除定时任务
 
        + 使用spring task不需要引用额外的jar包，spring-core中已经完成封装
 	     ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast.png?raw=true)
