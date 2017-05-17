@@ -10,8 +10,10 @@ import org.springframework.scheduling.annotation.AsyncConfigurer;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
+/**
+ * 利用@EnableAsync注解开启异步任务支持
+ */
 @Configuration
-// 利用@EnableAsync注解开启异步任务支持
 @EnableAsync
 public class TaskExecutorConfig implements AsyncConfigurer {
 

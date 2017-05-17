@@ -89,5 +89,7 @@
 			<artifactId>logback-core</artifactId>
 		</dependency>
 		<!-- 日志配置结束 -->
+		
+		
 	</dependencies>
 </project>

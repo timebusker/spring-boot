@@ -12,19 +12,22 @@
 ### Spring中的@Async
      在Spring中，基于@Async标注的方法，称之为异步方法；这些方法将在执行的时候，
 	 将会在独立的线程中被执行，调用者无需等待它的完成，即可继续其他的操作。
-	 - #### 启用@Async 
-	 基于注解启用方式
+
+- #### 启用@Async 
+基于注解启用方式
 ```
 @Configuration  
 @EnableAsync  
 public class SpringAsyncConfig { ... } 
 ```	 
-	 - #### 基于XML配置启用方式
+
+- #### 基于XML配置启用方式
 ```
-<task:executor id="myexecutor" pool-size="5" />
-<task:annotation-driven executor="myexecutor"/>
+<task:executor id="executor" pool-size="5" />
+<task:annotation-driven executor="executor"/>
 ```	 	 
-	 - #### 基于@Async无返回值调用
+
+- #### 基于@Async无返回值调用
 ```
 	/**
 	 * 仅使用异步注解的方式实现异步方法
@@ -41,8 +44,9 @@ public class SpringAsyncConfig { ... }
 		logger.info("\t 完成任务二   ");
 		logger.info("注解任务执行的时间是： " + sum + "（毫秒）");
 	}
-```		 
-	 - #### 基于@Async返回值的调用
+```	
+	 
+- #### 基于@Async返回值的调用
 ```
 	/**
 	 * 异步任务 只需要在所需实现异步的方法上加上@Async注解， 并通过Future<T>来接受异步方法的处理结果
@@ -73,11 +77,13 @@ while (true) {
 	}
 }
 ```	 
-	  - #### 异步方法执行效果图
+
+- #### 异步方法执行效果图
 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-5-Async/async-test-res.png?raw=true)
 
 ---------------------------
 ---------------------------
+
 ## 优化异步调用
     在上面，我使用了最简单spring async实现方式，同时在测试***基于@Async返回值的调用***中，
     使用缺省的TaskExecutor，出现了提示：
