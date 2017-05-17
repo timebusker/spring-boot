@@ -74,7 +74,7 @@ while (true) {
 }
 ```	 
 	  - #### 异步方法执行效果图
-![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-5-Async/async-res.png?raw=true)
+![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-5-Async/async-test-res.png?raw=true)
 
 ---------------------------
 ---------------------------
