@@ -11,4 +11,6 @@
 
 ### 第四个项目：[spring-boot-4-Scheduled 使用定时任务](https://github.com/timebusker/spring-boot/tree/master/spring-boot-4-Scheduled/)
 
+### 第五个项目：[spring-boot-5-Async 使用@Async实现异步调用](https://github.com/timebusker/spring-boot/tree/master/spring-boot-5-Async/)
+
 ----
