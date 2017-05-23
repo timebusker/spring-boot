@@ -4,7 +4,7 @@
 ### 项目阐述
    ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-6-GlobalException/error.png?raw=true)
 
-   我们在做Web应用的时候，请求处理过程中发生错误是非常常见的情况。Spring Boot提供了一个默认的映射：** /error **，
+   我们在做Web应用的时候，请求处理过程中发生错误是非常常见的情况。Spring Boot提供了一个默认的映射：**/error**，
    当处理中抛出异常之后，会转到该请求中处理，并且该请求有一个全局的错误页面用来展示异常内容。
    
    虽然，Spring Boot中实现了默认的error映射，但是在实际应用中，上面你的错误页面对用户来说并不够友好，
@@ -71,7 +71,7 @@ public class GlobalExceptionController {
 	}
 }
 ```
- + #### 实现** error.html **
+ + #### 实现**error.html**
 	  在templates目录下创建error.html，将请求的URL和Exception对象的message输出。
 ```html
 <!DOCTYPE html>
