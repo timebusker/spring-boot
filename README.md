@@ -13,5 +13,8 @@
 
 ### 第五个项目：[spring-boot-5-Async 使用@Async实现异步调用](https://github.com/timebusker/spring-boot/tree/master/spring-boot-5-Async/)
 
+### 第六个项目：[spring-boot-6-GlobalException 统一异常捕获处理](https://github.com/timebusker/spring-boot/tree/master/spring-boot-6-GlobalException/)
+
+
 
 ----
