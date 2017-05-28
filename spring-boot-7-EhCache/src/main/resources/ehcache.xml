@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ehcache.xsd"
+	updateCheck="false">
+
+	<!-- 设置缓存路径（ehcache分为内存和磁盘两级，此属性定义磁盘的缓存位置） -->
+	<!-- 
+	user.home – 用户主目录
+    user.dir  – 用户当前工作目录
+    java.io.tmpdir – 默认临时文件路径 
+    -->
+	<diskStore path="java.io.tmpdir/ehcache-temp" />
+
+	<!-- 默认缓存策略：当ehcache找不到定义的缓存时，则使用这个缓存策略 -->
+	<defaultCache maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="120" timeToLiveSeconds="120"
+		overflowToDisk="true" maxElementsOnDisk="10000000" diskPersistent="false" diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU" />
+
+	<!-- 自定缓存策略 -->
+	<cache name="user-cache" maxElementsInMemory="10000" eternal="false" timeToIdleSeconds="15" timeToLiveSeconds="20"
+		overflowToDisk="true" maxElementsOnDisk="10000000" diskPersistent="true" diskExpiryThreadIntervalSeconds="120"
+		memoryStoreEvictionPolicy="LRU" />
+
+	<!-- 
+	
+	name：缓存名称；
+	
+	maxElementsInMemory：内存中最大缓存对象数；
+	
+	maxElementsOnDisk：硬盘中最大缓存对象数，若是0表示无穷大；
+	
+	eternal：true表示对象永不过期，此时会忽略timeToIdleSeconds和timeToLiveSeconds属性，默认为false；
+	
+	overflowToDisk：true表示当内存缓存的对象数目达到了maxElementsInMemory界限后，会把溢出的对象写到硬盘缓存中。注意：如果缓存的对象要写入到硬盘中的话，则该对象必须实现了Serializable接口；
+	
+	diskSpoolBufferSizeMB：磁盘缓存区大小，默认为30MB；
+	
+	diskPersistent：是否缓存虚拟机重启期数据；
+	
+	diskExpiryThreadIntervalSeconds：磁盘失效线程运行时间间隔，默认为120秒；
+	
+	timeToIdleSeconds： 设定允许对象处于空闲状态的最长时间，以秒为单位。当对象自从最近一次被访问后，如果处于空闲状态的时间超过了timeToIdleSeconds属性值，这个对象就会过期，EHCache将把它从缓存中清空；
+	
+	timeToLiveSeconds：设定对象允许存在于缓存中的最长时间，以秒为单位。当对象自从被存放到缓存中后，如果处于缓存中的时间超过了 timeToLiveSeconds属性值，这个对象就会过期，EHCache将把它从缓存中清除，timeToLiveSeconds必须大于timeToIdleSeconds属性，才有意义；
+	
+	memoryStoreEvictionPolicy：当达到maxElementsInMemory限制时，Ehcache将会根据指定的策略去清理内存。可选策略有：LRU（最近最少使用，默认策略）、FIFO（先进先出）、LFU（最少访问次数）。
+	
+	-->
+</ehcache>

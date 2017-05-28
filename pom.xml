@@ -32,9 +32,7 @@
 
 	<build>
 		<finalName>spring-boot</finalName>
-		<!-- spring-boot-maven-plugin 提供了许多非常便捷的插件，它可以在classpath下收集很多的JAR包， 并能够建立一个独立可运行的JAR包，这让他能够非常方便的运行你的系统服务�?? 
-			spring-boot-maven-plugin插件 搜索public static void main()方法标记为可运行的类。它提供内置的依赖解析器，用于设置版本号匹配Spring引导依赖�?? 
-			你可以覆盖任何你想要的版本，但是它将默认为Boot的所选版本集 -->
+		<!-- spring-boot-maven-plugin 提供了许多非常便捷的插件，它可以在classpath下收集很多的JAR包， 并能够建立一个独立可运行的JAR包，这让他能够非常方便的运行你的系统服务�?? spring-boot-maven-plugin插件 搜索public static void main()方法标记为可运行的类。它提供内置的依赖解析器，用于设置版本号匹配Spring引导依赖�?? 你可以覆盖任何你想要的版本，但是它将默认为Boot的所选版本集 -->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -47,15 +45,15 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<!-- 源代码使用的�??发版�?? -->
+					<!-- 源代码使用的�??发版�?? -->
 					<source>1.8</source>
-					<!-- �??要生成的目标class文件的编译版�?? -->
+					<!-- �??要生成的目标class文件的编译版�?? -->
 					<target>1.8</target>
-					<!-- �??般�?�言，target与source是保持一致的，但是，有时候为了让程序能在其他版本的jdk中运�??(对于低版本目标jdk，源代码中需要没有使用低版本jdk中不支持的语�??)，会存在target不同于source的情�?? -->
+					<!-- �??般�?�言，target与source是保持一致的，但是，有时候为了让程序能在其他版本的jdk中运�??(对于低版本目标jdk，源代码中需要没有使用低版本jdk中不支持的语�??)，会存在target不同于source的情�?? -->
 					<!-- 可�?�项 -->
 					<meminitial>128m</meminitial>
 					<maxmem>512m</maxmem>
-					<!-- fork is enable,用于明确表示编译版本配置的可�?? -->
+					<!-- fork is enable,用于明确表示编译版本配置的可�?? -->
 					<fork>true</fork>
 					<compilerVersion>1.3</compilerVersion>
 					<encoding>UTF-8</encoding>
@@ -69,18 +67,53 @@
 		<module>spring-boot-1-QuickStart</module>
 		<module>spring-boot-2-RESTful</module>
 		<module>spring-boot-3-logs</module>
-    <module>spring-boot-4-Scheduled</module>
-    <module>spring-boot-5-Async</module>
-    <module>spring-boot-6-GlobalException</module>
-    <module>spring-boot-7-EhCache</module>
-    <module>spring-boot-8-AOP</module>
-    <module>spring-boot-9-JavaMailSender</module>
-    <module>spring-boot-10-SpringData</module>
-    <module>spring-boot-11-SpringSecurity</module>
-    <module>spring-boot-12-Swagger2</module>
-    <module>spring-boot-13-MyBatis</module>
-    <module>spring-boot-14-JdbcTemplate</module>
-    <module>spring-boot-15-Redis</module>
-    <module>spring-boot-16-Transcation</module>
-  </modules>
+		<module>spring-boot-4-Scheduled</module>
+		<module>spring-boot-5-Async</module>
+		<module>spring-boot-6-GlobalException</module>
+		<module>spring-boot-7-EhCache</module>
+		<module>spring-boot-8-AOP</module>
+		<module>spring-boot-9-JavaMailSender</module>
+		<module>spring-boot-10-SpringData</module>
+		<module>spring-boot-11-SpringSecurity</module>
+		<module>spring-boot-12-Swagger2</module>
+		<module>spring-boot-13-MyBatis</module>
+		<module>spring-boot-14-JdbcTemplate</module>
+		<module>spring-boot-15-Redis</module>
+		<module>spring-boot-16-Transcation</module>
+	</modules>
+
+	<repositories>
+		<repository>
+			<id>spring-snapshots</id>
+			<name>Spring Snapshots</name>
+			<url>https://repo.spring.io/snapshot</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>datanucleus</id>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 </project>

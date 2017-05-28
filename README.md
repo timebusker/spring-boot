@@ -15,6 +15,6 @@
 
 ### 第六个项目：[spring-boot-6-GlobalException 统一异常捕获处理](https://github.com/timebusker/spring-boot/tree/master/spring-boot-6-GlobalException/)
 
-
+### 第七个项目：[spring-boot-7-EhCache 集成Ehcache缓存框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-7-EhCache/)
 
 ----
