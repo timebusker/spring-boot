@@ -17,4 +17,11 @@
 
 ### 第七个项目：[spring-boot-7-EhCache 集成Ehcache缓存框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-7-EhCache/)
 
+### 第八个项目：[spring-boot-8-AOP 集成AOP面向切面编程](https://github.com/timebusker/spring-boot/tree/master/spring-boot-8-AOP/)
+
+### 第九个项目：[spring-boot-9-JavaMailSender 集成JavaMailSender](https://github.com/timebusker/spring-boot/tree/master/spring-boot-9-JavaMailSender/)
+
+### 第十个项目：[spring-boot-10-SpringData 使用spring-data持久层](https://github.com/timebusker/spring-boot/tree/master/spring-boot-10-SpringData/)
+
+### 第十一个项目：[spring-boot-11-SpringSecurity 集成SpringSecurity安全框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-11-SpringSecurity/)
 ----
