@@ -14,7 +14,7 @@
     <artifactId>spring-boot-starter-mail</artifactId>
 </dependency>
 ```
-   + 以QQ邮箱为例,配置发送邮件示例
+  + 以QQ邮箱为例,配置发送邮件示例
 ```
 spring.mail.host=smtp.qq.com
 spring.mail.username=用户名
