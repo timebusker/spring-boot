@@ -9,4 +9,5 @@
   <packaging>pom</packaging>
   <name>spring-boot-15-Redis</name>
   <description>spring boot redis 使用总结：消息队列、缓存</description>
+  
 </project>
