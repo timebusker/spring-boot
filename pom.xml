@@ -14,7 +14,7 @@
 		<version>1.4.5.RELEASE</version>
 	</parent>
 
-	<!-- 全局依赖设置：引入依赖会自动传�?�到子模块中 -->
+	<!-- 全局依赖设置：引入依赖会自动传递到子模块中 -->
 	<dependencies>
 	</dependencies>
 
@@ -74,9 +74,21 @@
 		<module>spring-boot-14-JdbcTemplate</module>
 		<module>spring-boot-15-Redis</module>
 		<module>spring-boot-16-Transcation</module>
+		<module>spring-boot-17-monitor</module>
 	</modules>
 
 	<repositories>
+	    <repository>
+			<id>Aliyun_Nexus</id>
+            <name>Aliyun Nexus Repository</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
 		<repository>
 			<id>spring-snapshots</id>
 			<name>Spring Snapshots</name>
@@ -92,16 +104,6 @@
 			<id>spring-milestones</id>
 			<name>Spring Milestones</name>
 			<url>https://repo.spring.io/milestone</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-		<repository>
-			<id>datanucleus</id>
-			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
 			</releases>
