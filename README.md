@@ -1,4 +1,3 @@
-# &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;SPRING BOOT PRACTICE
 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot.png?raw=true)
 
 ## 项目列表
@@ -24,4 +23,6 @@
 ### 第十个项目：[spring-boot-10-SpringData 使用spring-data持久层](https://github.com/timebusker/spring-boot/tree/master/spring-boot-10-SpringData/)
 
 ### 第十一个项目：[spring-boot-11-SpringSecurity 集成SpringSecurity安全框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-11-SpringSecurity/)
+
+### 第十七个项目：[spring-boot-11-SpringSecurity 集成SpringSecurity安全框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-17-monitor/)
 ----

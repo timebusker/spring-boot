@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<!-- 文件输出格式 -->
+	<property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
+	<!-- test文件路径 -->
+	<property name="file-path" value="logs/actuator.log" />
+
+	<!-- 开发环境 -->
+	<springProfile name="dev">
+		<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+				<pattern>%date [%thread] %-5level %logger{80} || %msg%n</pattern>
+			</encoder>
+		</appender>
+		<appender name="log-files" class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<file>${file-path}</file>
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<fileNamePattern>${file-path}/warn.%d{yyyy-MM-dd}.log</fileNamePattern>
+				<MaxHistory>100</MaxHistory>
+			</rollingPolicy>
+			<layout class="ch.qos.logback.classic.PatternLayout">
+				<pattern>${PATTERN}</pattern>
+			</layout>
+		</appender>
+		<logger name="cn.timebusker.util" level="debug" />
+		<root level="info">
+			<appender-ref ref="CONSOLE" />
+			<appender-ref ref="log-files" />
+		</root>
+	</springProfile>
+	
+</configuration>
