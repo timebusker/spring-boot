@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
+	<include resource="org/springframework/boot/logging/logback/base.xml" />
+	<jmxConfigurator />
+
 	<!-- 文件输出格式 -->
 	<property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
 	<!-- test文件路径 -->
-	<property name="file-path" value="logs/actuator.log" />
+	<property name="file-path" value="logs/admin-client.log" />
 
 	<!-- 开发环境 -->
 	<springProfile name="dev">
@@ -29,5 +32,5 @@
 			<appender-ref ref="log-files" />
 		</root>
 	</springProfile>
-	
+
 </configuration>
