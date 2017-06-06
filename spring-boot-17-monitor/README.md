@@ -14,7 +14,7 @@ Spring Boot Admin就是将Spring Boot Actuator中提供的endpoint信息可视�
 
 + 如果希望通过Web控制系统的日志级别，则需要在应用中添加Jolokia JMX库（org.jolokia:jolokia-core）；
   spring-boot-admin-starter-client 会自动依赖 jolokia-core，jolokia是用于 JMX-bean 管理的。
-
+	
 **POM.xml**
 ```
 <dependency>
