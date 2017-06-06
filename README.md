@@ -24,6 +24,16 @@
 
 #### 第十一个模块：[集成SpringSecurity安全框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-11-SpringSecurity/)
 
+#### 第十二个模块：[集成Swagger2构建强大的RESTful API](https://github.com/timebusker/spring-boot/tree/master/spring-boot-12-Swagger2/)
+
+#### 第十三个模块：[集成MyBatis持久层框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-13-MyBatis/)
+
+#### 第十四个模块：[使用spring JdbcTemplate持久层框架](https://github.com/timebusker/spring-boot/tree/spring-boot-14-JdbcTemplate/)
+
+#### 第十五个模块：[集成Redis中间件项目实践](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/)
+
+#### 第十一个模块：[使用Transcation保证数据一致性](https://github.com/timebusker/spring-boot/tree/master/spring-boot-16-Transcation/)
+
 #### 第十七个模块：[应用的健康监控](https://github.com/timebusker/spring-boot/tree/master/spring-boot-17-monitor/)
 
 
