@@ -31,6 +31,7 @@ public class App {
 	 * @ComponentScan 告诉Spring寻找其他组件，配置，以及业务层类,最前面才能加载到所有的类。
 	 */
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		// devtools：是spring boot的一个热部署工具
 		//设置 spring.devtools.restart.enabled 属性为false，可以关闭该特性.
@@ -42,7 +43,7 @@ public class App {
 		String[] beanNames = ctx.getBeanDefinitionNames();
 		Arrays.sort(beanNames);
 		for (String beanName : beanNames) {
-			System.out.println(beanName);
+			// System.out.println(beanName);
 		}
 	}
 }
