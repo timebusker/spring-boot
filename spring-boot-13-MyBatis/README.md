@@ -1,7 +1,7 @@
 ----
-## [spring-boot-3-logs-Logback 集成Logback日志框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-Logback/)
+## [集成MyBatis持久层框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-13-MyBatis/)
 
-### 项目阐述
+### 关于MyBatis
    ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/spring-boot-3-logs-Logback/Logback.png?raw=true)
  
  + #### SLF4J+Logback配置说明
@@ -18,7 +18,5 @@
 ### 相关文章
 
 [MyBatis Generator 详解](http://blog.csdn.net/isea533/article/details/42102297)
-[logback节点配置详解](http://www.cnblogs.com/DeepLearing/p/5663178.html)
-[logback节点配置详解](http://www.cnblogs.com/DeepLearing/p/5663178.html)
 
 ----
