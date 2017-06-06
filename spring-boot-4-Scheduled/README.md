@@ -55,6 +55,12 @@
 
 - #### Spring Task 简单使用、动态修改cron表达式、动态添加修改删除定时任务
 
++ 关于 spring task的注解使用--@Scheduled详解      
+@Scheduled(fixedRate = 5000) ：上一次开始执行时间点之后5秒再执行
+@Scheduled(fixedDelay = 5000) ：上一次执行完毕时间点之后5秒再执行
+@Scheduled(initialDelay=1000, fixedRate=5000) ：第一次延迟1秒后执行，之后按fixedRate的规则每5秒执行一次
+@Scheduled(cron="*/5 * * * * *") ：通过cron表达式定义规则
+
 + 使用spring task不需要引用额外的jar包，spring-core中已经完成封装
 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast.png?raw=true)
 	   
@@ -93,4 +99,8 @@ public class SpringTaskSample {
 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-4-Scheduled/spring-core-tast-res.png?raw=true)
 
 + Spring的Scheduled Task实现集群思路
-	     实现任务互斥，通过声明***全局锁***作为互斥变量，获得锁的变量才有权执行任务。
+实现任务互斥，通过声明 ***全局锁*** 作为互斥变量，获得锁的变量才有权执行任务。
+
+
+
+	
