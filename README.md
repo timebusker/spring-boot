@@ -1,5 +1,22 @@
 ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot.png?raw=true)
 
+Spring Boot是由Pivotal团队提供的全新框架，其设计目的是用来简化新Spring应用的初始搭建以及开发过程。
+该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。通过这种方式，
+Spring Boot致力于在蓬勃发展的快速应用开发领域（rapid application development）成为领导者。
+
+Spring Boot 项目旨在简化创建产品级的 Spring 应用和服务。你可通过它来选择不同的 Spring 平台。
+可创建独立的 Java 应用和 Web 应用，同时提供了命令行工具来允许 'spring scripts'。
+下图显示 Spring Boot 在 Spring 生态中的位置：
+![image](https://github.com/timebusker/spring-boot/raw/master/static/logo.png?raw=true)
+
+该项目主要的目的是：
+
++ 为 Spring 的开发提供了更快更广泛的快速上手
+
++ 使用默认方式实现快速开发
+
++ 提供大多数项目所需的非功能特性，诸如：嵌入式服务器、安全、心跳检查、外部配置等
+
 ### 模块列表
 ----
 #### 第一个模块：[入门程序](https://github.com/timebusker/spring-boot/tree/master/spring-boot-1-QuickStart/)

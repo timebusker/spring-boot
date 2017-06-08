@@ -35,4 +35,5 @@ public interface UserInfoMapper {
 
 	@Delete("DELETE FROM user_info WHERE id =#{id}")
 	void delete(int id);
+	
 }
