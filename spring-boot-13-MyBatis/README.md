@@ -151,4 +151,6 @@ rollback 就是将回滚段中的数据回滚到数据库中，不会覆盖数�
 
 [MyBatis Generator 详解](http://blog.csdn.net/isea533/article/details/42102297)
 
+
+### [Spring Boot整合MyBatis使用实践总结](https://github.com/timebusker/spring-boot-Mybaits)
 ----
