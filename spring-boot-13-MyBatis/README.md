@@ -14,6 +14,7 @@ Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中
 + 集成mysql-connector-java连接mysql的必要依赖 
 + 整合MyBatis的核心依赖mybatis-spring-boot-starter 
 + 不引入spring-boot-starter-jdbc依赖，是由于mybatis-spring-boot-starter中已经包含了此依赖 
+
 ***spring-boot-starter-jdbc的作用就是：引入tomcat-jdbc数据源（spring-boot默认数据源）和引入spring-jdbc持久化操作***
 ***在本案例中，排除tomcat-jdbc，使用druid***
 ```xml
