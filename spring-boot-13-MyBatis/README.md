@@ -8,12 +8,13 @@ MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持�
 代码和手动设置参数以及获取结果集。MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 
 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。
 
-###整合MyBatis
+### 整合MyBatis
 #### **pom.xml**中引入依赖
-+ 集成spring-boot-starter基础和spring-boot-starter-test用来做单元测试验证数据访问
-+ 集成mysql-connector-java连接mysql的必要依赖
-+ 整合MyBatis的核心依赖mybatis-spring-boot-starter
-+ 不引入spring-boot-starter-jdbc依赖，是由于mybatis-spring-boot-starter中已经包含了此依赖
++ 集成spring-boot-starter基础和spring-boot-starter-test用来做单元测试验证数据访问 
++ 集成mysql-connector-java连接mysql的必要依赖 
++ 整合MyBatis的核心依赖mybatis-spring-boot-starter 
++ 不引入spring-boot-starter-jdbc依赖，是由于mybatis-spring-boot-starter中已经包含了此依赖 
+
 ***spring-boot-starter-jdbc的作用就是：引入tomcat-jdbc数据源（spring-boot默认数据源）和引入spring-jdbc持久化操作***
 ***在本案例中，排除tomcat-jdbc，使用druid***
 ```xml
