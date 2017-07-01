@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.timebusker</groupId>
 	<artifactId>spring-boot</artifactId>
@@ -32,7 +33,8 @@
 
 	<build>
 		<finalName>spring-boot</finalName>
-		<!-- spring-boot-maven-plugin 提供了许多非常便捷的插件，它可以在classpath下收集很多的JAR包， 并能够建立一个独立可运行的JAR包，这让他能够非常方便的运行你的系统服务�?? spring-boot-maven-plugin插件 搜索public static void main()方法标记为可运行的类。它提供内置的依赖解析器，用于设置版本号匹配Spring引导依赖�?? 你可以覆盖任何你想要的版本，但是它将默认为Boot的所选版本集 -->
+		<!-- spring-boot-maven-plugin 提供了许多非常便捷的插件，它可以在classpath下收集很多的JAR包， 并能够建立一个独立可运行的JAR包，这让他能够非常方便的运行你的系统服务�?? spring-boot-maven-plugin插件 
+			搜索public static void main()方法标记为可运行的类。它提供内置的依赖解析器，用于设置版本号匹配Spring引导依赖�?? 你可以覆盖任何你想要的版本，但是它将默认为Boot的所选版本集 -->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -75,12 +77,13 @@
 		<module>spring-boot-15-Redis</module>
 		<module>spring-boot-16-Transcation</module>
 		<module>spring-boot-17-monitor</module>
+		<module>spring-boot-18-MQ</module>
 	</modules>
 
 	<repositories>
-	    <repository>
+		<repository>
 			<id>Aliyun_Nexus</id>
-            <name>Aliyun Nexus Repository</name>
+			<name>Aliyun Nexus Repository</name>
 			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
