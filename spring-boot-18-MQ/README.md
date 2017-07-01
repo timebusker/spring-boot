@@ -31,7 +31,7 @@
 
 
 
-- #### [ActiveMQ示例](https://github.com/timebusker/spring-boot/tree/master/spring-boot-18-MQ/spring-boot-18-MQ-activemq/)
+- #### [整合ActiveMQ示例](https://github.com/timebusker/spring-boot/tree/master/spring-boot-18-MQ/spring-boot-18-MQ-activemq/)
 
 
 
