@@ -1,8 +1,7 @@
-----
-### [消息队列实践](https://github.com/timebusker/spring-boot/tree/master/spring-boot-18-MQ/)
+### [消息队列实践](https://github.com/timebusker/spring-boot/tree/master/spring-boot-18-MQ/)  
 
-- #### 队列（Queue）和主题（Topic）区别
-  + ##### 点对点（point-to-point，简称PTP）Queue消息传递模型
+- #### 队列（Queue）和主题（Topic）区别  
+  + ##### 点对点（point-to-point，简称PTP）Queue消息传递模型  
     * 通过该消息传递模型，一个应用程序（即消息生产者）可以向另外一个应用程序（即消息消费者）发送消息。
 	在此传递模型中，消息目的地类型是队列（即Destination接口实现类实例由Session接口实现类实例通过调用其
 	createQueue方法并传入队列名称而创建）。消息首先被传送至消息服务器端特定的队列中，然后从此对列中将消
@@ -10,7 +9,7 @@
 	递给一个消息消费者。如果多个消息消费者正在监听队列上的消息，JMS消息服务器将根据“先来者优先”的原则确定
 	由哪个消息消费者接收下一条消息。如果没有消息消费者在监听队列，消息将保留在队列中，直至消息消费者连接到
 	队列为止。这种消息传递模型是传统意义上的懒模型或轮询模型。在此模型中，消息不是自动推动给消息消费者的，
-	而是要由消息消费者从队列中请求获得。 
+	而是要由消息消费者从队列中请求获得。   
   + ##### 发布/订阅（publish/subscribe，简称pub/sub）Topic消息传递模型
     * 通过该消息传递模型，应用程序能够将一条消息发送给多个消息消费者。在此传送模型中，消息目的地类型是主题
 	（即Destination接口实现类实例由Session接口实现类实例通过调用其createTopic方法并传入主题名称而创建）。消
@@ -19,8 +18,8 @@
 	当消费者再次处于活动状态时，将会接收该消息。如果消费者均没有注册某个主题目标，该主题只保留注册了长期订阅的
 	非活动消费者的消息。与PTP消息传递模型不同，pub/sub消息传递模型允许多个主题订阅者接收同一条消息。JMS一直保留
 	消息，直至所有主题订阅者都接收到消息为止。pub/sub消息传递模型基本上是一个推模型。在该模型中，消息会自动广播，
-	消息消费者无须通过主动请求或轮询主题的方法来获得新的消息。
-  + Queue与Topic区别
+	消息消费者无须通过主动请求或轮询主题的方法来获得新的消息。  
+  + Queue与Topic区别  
   | 类型     |    Topic | Queue  |
   | :--------: | :--------| :------- |
   | 概要  | Publish Subscribe messaging 发布订阅消息 |  Point-to-Point 点对点   |
@@ -40,4 +39,3 @@
 [Spring Boot集成ActiveMQ](http://412887952-qq-com.iteye.com/blog/2319751)
 [Spring Boot集成ActiveMQ](http://412887952-qq-com.iteye.com/blog/2338176)
 
-----
