@@ -37,6 +37,6 @@
 
 ### 相关文章
 
-[Spring Boot集成ActiveMQ](http://412887952-qq-com.iteye.com/blog/2319751)
-[Spring Boot集成ActiveMQ](http://412887952-qq-com.iteye.com/blog/2338176)
+[Spring Boot集成ActiveMQ](http://412887952-qq-com.iteye.com/blog/2319751)  
+[Spring Boot集成ActiveMQ](http://412887952-qq-com.iteye.com/blog/2338176)  
 
