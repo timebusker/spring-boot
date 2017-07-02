@@ -15,6 +15,7 @@ public class DirectRabbitConfiguration {
 	 * 
 	 * 2.如果vhost中不存在RouteKey中指定的队列名，则该消息会被抛弃。
 	 */
+	
 	@Bean("mineQueue")
 	public Queue queue() {
 		return new Queue("timebusker.queue");
