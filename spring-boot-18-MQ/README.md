@@ -1,5 +1,21 @@
 ### [消息队列实践](https://github.com/timebusker/spring-boot/tree/master/spring-boot-18-MQ/)  
 
+- #### Message Broker与AMQP简介
+  + Message Broker是一种消息验证、传输、路由的架构模式，其设计目标主要应用于下面这些场景：
+     * 消息路由到一个或多个目的地  
+	 * 消息转化为其他的表现方式  
+	 * 执行消息的聚集、消息的分解，并将结果发送到他们的目的地，然后重新组合相应返回给消息用户  
+	 * 调用Web服务来检索数据  
+	 * 响应事件或错误  
+	 * 使用发布-订阅模式来提供内容或基于主题的消息路由  
+	 
+  + AMQP是Advanced Message Queuing Protocol的简称，它是一个面向消息中间件的开放式标准应用层协议。AMQP定义了这些特性：
+     * 消息方向  
+     * 消息队列  
+     * 消息路由（包括：点到点和发布-订阅模式）  	 
+	 * 可靠性  
+	 * 安全性  
+	 
 - #### 队列（Queue）和主题（Topic）区别  
   + ##### 点对点（point-to-point，简称PTP）Queue消息传递模型  
     * 通过该消息传递模型，一个应用程序（即消息生产者）可以向另外一个应用程序（即消息消费者）发送消息。
@@ -27,16 +43,15 @@
   | **有无状态**     |   topic数据默认不落地，是无状态的  |  Queue数据默认会在mq服务器上以文件形式保存，比如Active MQ一般保存在$AMQ_HOME\data\kr-store\data下面。也可以配置成DB存储  |  
   | **完整性保障**      |    并不保证publisher发布的每条数据Subscriber都能接受到  | Queue保证每条数据都能被receiver接收  |  
   | **消息是否会丢失**      |   一般来说publisher发布消息到某一个topic时，只有正在监听该topic地址的sub能够接收到消息；如果没有sub在监听，该topic就丢失了 | Sender发送消息到目标Queue，receiver可以异步接收这个Queue上的消息。Queue上的消息如果暂时没有receiver来取，也不会丢失  |  
-  | **消息发布接收策略**      |    一对多的消息发布接收策略，监听同一个topic地址的多个sub都能收到publisher发送的消息。Sub接收完通知mq服务器  | 一对一的消息发布接收策略，一个sender发送的消息，只能有一个receiver接收。receiver接收完后，通知mq服务器已接收，mq服务器对queue里的消息采取删除或其他操作  |  
-
-
-
+  | **消息发布接收策略**      |    一对多的消息发布接收策略，监听同一个topic地址的多个sub都能收到publisher发送的消息。Sub接收完通知mq服务器  | 一对一的消息发布接收策略，一个sender发送的消息，只能有一个receiver接收。receiver接收完后，通知mq服务器已接收，mq服务器对queue里的消息采取删除或其他操作  |   
+  
+  
+  
 - #### [整合ActiveMQ示例](https://github.com/timebusker/spring-boot/tree/master/spring-boot-18-MQ/spring-boot-18-MQ-activemq/)
-
 
 
 ### 相关文章
 
-[Spring Boot集成ActiveMQ](http://412887952-qq-com.iteye.com/blog/2319751)  
-[Spring Boot集成ActiveMQ](http://412887952-qq-com.iteye.com/blog/2338176)  
+[Kafka、RabbitMQ、RocketMQ消息中间件的对比—— 消息发送性能](https://yq.aliyun.com/articles/25385)  
+[MQ选型对比RabbitMQ RocketMQ ActiveMQ Kafka](http://blog.csdn.net/oMaverick1/article/details/51331004)  
 
