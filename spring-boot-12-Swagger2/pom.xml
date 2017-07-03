@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>cn.timebusker</groupId>
@@ -13,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
-	    <!-- Spring Boot 核心三个模块 START -->
+		<!-- Spring Boot 核心三个模块 START -->
 		<!-- 核心模块，包括自动配置支持、日志和YAML -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -43,6 +44,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
 		<!-- END -->
 		<!-- 排除Tomcat,使用jetty -->
 		<dependency>
@@ -56,8 +58,21 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!-- 加入Swagger2的依赖 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.7.0</version>
+		</dependency>
+
 		<!-- 日志配置开始 -->
-		<!-- 加上几个重要的实现适配器log4j-over-slf4j、log4j-over-slf4j、jul-to-slf4j， 然后jboss-logging部分也进行了统一的版本控制。同时删除及exclude掉所有log4j、commons-logging的各个版本。 适配器和具体日志实现，不能共存，否则适配器不生效。这样的话，我们只有logback配置文件即可，因为log4j的输出已经委托给了slf4j（通过log4j-over-slf4j），而slf4j的默认实现是logbac -->
+		<!-- 加上几个重要的实现适配器log4j-over-slf4j、log4j-over-slf4j、jul-to-slf4j， 然后jboss-logging部分也进行了统一的版本控制。同时删除及exclude掉所有log4j、commons-logging的各个版本。 
+			适配器和具体日志实现，不能共存，否则适配器不生效。这样的话，我们只有logback配置文件即可，因为log4j的输出已经委托给了slf4j（通过log4j-over-slf4j），而slf4j的默认实现是logbac -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
