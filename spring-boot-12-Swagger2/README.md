@@ -1,77 +1,35 @@
 ----
-## [spring-boot-3-logs-Logback 集成Logback日志框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-Logback/)
+### [集成Swagger2构建强大的RESTful API](https://github.com/timebusker/spring-boot/tree/master/spring-boot-12-Swagger2)
 
-### 项目阐述
-   ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/spring-boot-3-logs-Logback/Logback.png?raw=true)
- 
- + #### SLF4J+Logback配置说明
-   * [logback日志分开纪录](http://www.cnblogs.com/DeepLearing/p/5664941.html)</br>
-   * [logback节点配置详解](http://www.cnblogs.com/DeepLearing/p/5663178.html)
-   * [logback 中文手册.pdf](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/spring-boot-3-logs-Logback/logback_cn.pdf?raw=true)
+- #### 概述
+  + 由于Spring Boot能够快速开发、便捷部署等特性，相信有很大一部分Spring Boot的用户会用来构建RESTful API。而我们构建RESTful API的目的通常都是由于多终端的原因，这些终端会共用很多底层业务逻辑，因此我们会抽象出这样一层来同时服务于多个移动端或者Web前端。  
+  + 这样一来，我们的RESTful API就有可能要面对多个开发人员或多个开发团队：IOS开发、Android开发或是Web开发等。为了减少与其他团队平时开发期间的频繁沟通成本，传统做法我们会创建一份RESTful API文档来记录所有接口细节，然而这样的做法有以下几个问题：  
+     * 由于接口众多，并且细节复杂（需要考虑不同的HTTP请求类型、HTTP头部信息、HTTP请求内容等），高质量地创建这份文档本身就是件非常吃力的事，下游的抱怨声不绝于耳。
+     * 随着时间推移，不断修改接口实现的时候都必须同步修改接口文档，而文档与代码又处于两个不同的媒介，除非有严格的管理机制，不然很容易导致不一致现象。
+  + 为了解决上面这样的问题，本文将介绍RESTful API的重磅好伙伴Swagger2，它可以轻松的整合到Spring Boot中，并与Spring MVC程序配合组织出强大RESTful API文档。它既可以减少我们创建文档的工作量，同时说明内容又整合入实现代码中，让维护文档和修改代码整合为一体，可以让我们在修改代码逻辑的同时方便的修改文档说明。另外Swagger2也提供了强大的页面测试功能来调试每个RESTful API。具体效果如下图所示： 
+  ![image](https://github.com/timebusker/spring-boot/raw/master/static/12/1.png?raw=true)
+  ![image](https://github.com/timebusker/spring-boot/raw/master/static/12/2.png?raw=true)
 	
- + #### 配置多环境不同日志级别
-	  ***logback.xml*配置讲解**
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
+**POM.xml**
+```
+<dependency>
+    <groupId>org.jolokia</groupId>
+    <artifactId>jolokia-core</artifactId>
+    <version>1.3.6</version>
+</dependency>
+```
+**logback.xml**
+```
 <configuration>
-	<!-- 文件输出格式 -->
-	<property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
-	<!-- test文件路径 -->
-	<property name="TEST_FILE_PATH" value="c:/logs/test.log" />
-	<!-- pro文件路径 -->
-	<property name="PRO_FILE_PATH" value="c:/logs/prod.log" />
-
-	<!-- 开发环境 -->
-	<springProfile name="dev">
-		<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
-			<encoder>
-				<pattern>%date [%thread] %-5level %logger{80} || %msg%n</pattern>
-			</encoder>
-		</appender>
-		<logger name="cn.timebusker.util" level="debug" />
-		<root level="info">
-			<appender-ref ref="CONSOLE" />
-		</root>
-	</springProfile>
-
-	<!-- 测试环境 -->
-	<springProfile name="test">
-		<!-- 每天产生一个文件 -->
-		<appender name="TEST-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-			<!-- 文件路径 -->
-			<file>${TEST_FILE_PATH}</file>
-			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-				<!-- 文件名称 -->
-				<fileNamePattern>${TEST_FILE_PATH}/info.%d{yyyy-MM-dd}.log</fileNamePattern>
-				<!-- 文件最大保存历史数量 -->
-				<MaxHistory>100</MaxHistory>
-			</rollingPolicy>
-			<layout class="ch.qos.logback.classic.PatternLayout">
-				<pattern>${PATTERN}</pattern>
-			</layout>
-		</appender>
-		<root level="info">
-			<appender-ref ref="TEST-FILE" />
-		</root>
-	</springProfile>
-
-	<!-- 生产环境 -->
-	<springProfile name="prod">
-		<appender name="PROD_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-			<file>${PRO_FILE_PATH}</file>
-			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-				<fileNamePattern>${PRO_FILE_PATH}/warn.%d{yyyy-MM-dd}.log</fileNamePattern>
-				<MaxHistory>100</MaxHistory>
-			</rollingPolicy>
-			<layout class="ch.qos.logback.classic.PatternLayout">
-				<pattern>${PATTERN}</pattern>
-			</layout>
-		</appender>
-		<root level="warn">
-			<appender-ref ref="PROD_FILE" />
-		</root>
-	</springProfile>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <jmxConfigurator/>
 </configuration>
 ```
-	
+
+
+### 相关文章
+
+[使用Swagger2构建强大的RESTful API文档](http://blog.didispace.com/springbootswagger2/)  
+[swagger常用注解说明](http://www.jianshu.com/p/12f4394462d5)  
+
 ----
