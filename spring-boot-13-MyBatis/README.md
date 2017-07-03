@@ -1,10 +1,12 @@
 ----
 ## [集成MyBatis持久层框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-13-MyBatis/)
 
-### 关于MyBatis
-![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-13-MyBatis/mybatis-logo.png?raw=true)
+### [Spring Boot整合MyBatis使用实践总结](https://github.com/timebusker/spring-boot-Mybaits)
 
-MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。MyBatis 避免了几乎所有的 JDBC 
+### 关于MyBatis
+ - ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-13-MyBatis/mybatis-logo.png?raw=true)
+
+ - MyBatis 是支持定制化 SQL、存储过程以及高级映射的优秀的持久层框架。MyBatis 避免了几乎所有的 JDBC 
 代码和手动设置参数以及获取结果集。MyBatis 可以对配置和原生Map使用简单的 XML 或注解，将接口和 
 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。
 
@@ -134,7 +136,8 @@ Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中
 	List<UserInfo> queryById();
 ```
 
-### 关于rollback和commit的用法
+### 关于rollback和commit的用法  
+
 + 所谓 **DML** 语句就是 **INSERT/DELETE/UPDATE/SELECT**，而 **CREATE TABLE/VIEW** 之类的语句，是 **DDL**。
 
 + DML语句，执行完之后，处理的数据，都会放在回滚段中（除了 SELECT 语句），等待用户进行提交（COMMIT）或者回滚（ROLLBACK），
@@ -152,6 +155,4 @@ rollback 就是将回滚段中的数据回滚到数据库中，不会覆盖数�
 
 [MyBatis Generator 详解](http://blog.csdn.net/isea533/article/details/42102297)
 
-
-### [Spring Boot整合MyBatis使用实践总结](https://github.com/timebusker/spring-boot-Mybaits)
 ----
