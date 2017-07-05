@@ -8,15 +8,15 @@
     - 原子 – Redis的所有操作都是原子性的，同时Redis还支持对几个操作全并后的原子性执行  
     - 丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性   
 
-- ##### [Redis简单使用](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-sample/)
+- #### [Redis.....................简单使用](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-sample/)
 
-- ##### [Redis作Cache](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-cache)
+- ##### [Redis.....................Cache](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-cache)
 
-- ##### [Redis作Session](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-session)
+- #### [Redis.....................Session](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-session)
 
-- ##### [Redis作MQ](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-mq)
+- #### [Redis.....................MQ](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-mq)
 
-- ##### [Redis作集群](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-cluster)
+- #### [Redis.....................集群](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-cluster)
 
 
 
@@ -25,3 +25,4 @@
  - [Redis 教程](http://www.runoob.com/redis/redis-intro.html)   
  - [Spring Boot with Redis](http://www.jianshu.com/p/a2ab17707eff)   
  - [Spring Boot中使用Redis数据库](http://blog.didispace.com/springbootredis/)    
+ - [Spring Boot 整合 Redis 实现缓存操作](http://www.bysocket.com/?p=1756)    

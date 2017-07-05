@@ -20,9 +20,11 @@
 //		template.afterPropertiesSet();
 		return template;
 	}
-```  
+```    
      * 单元测试  
-```  
+  
+
+```    
 	@Test
 	public void test() throws Exception {
 		System.out.println("\n******************************************************\n");
@@ -36,10 +38,11 @@
 		System.out.println("\n\n\n" + admina.getUsername());
 		System.out.println("\n******************************************************\n");
 	}  
-```  
-     * service类
+```    
+     * service类  
 
-```  
+
+```    
 	public Object addObject(String key) throws Exception {
 		key = "蝙蝠侠";
 		AdministratorTest admin = new AdministratorTest("蝙蝠侠", "20", "1010", "TOOOM");
