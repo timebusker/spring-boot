@@ -1,34 +1,27 @@
-----
-## [spring-boot-3-logs spring boot 整合多个日志框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/)
+### [Redis使用实践](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/)
 
-## 良好日志架构：SLF4J + Log4j/Log4j2/Logback
-  
-## 日志架构性能比较：日志性能比较：Log4j < Logback < Log4j2
+### Redis简介
+ - Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，使用ANSI C语言编写、支持网络、可基于内存亦可持久化的日志型、Key-Value数据库。它可以用作数据库、缓存和消息中间件。 它支持多种类型的数据结构，如 字符串（strings）， 散列（hashes）， 列表（lists）， 集合（sets）， 有序集合（sorted sets） 与范围查询， bitmaps， hyperloglogs 和 地理空间（geospatial） 索引半径查询。 Redis 内置了 复制（replication），LUA脚本（Lua scripting）， LRU驱动事件（LRU eviction），事务（transactions） 和不同级别的 磁盘持久化（persistence）， 并通过 Redis哨兵（Sentinel）和自动 分区（Cluster）提供高可用性（high availability）。
+ - **Redis 优势：**  
+    - 性能极高 – Redis能读的速度是110000次/s,写的速度是81000次/s  
+    - 丰富的数据类型 – Redis支持二进制案例的 Strings, Lists, Hashes, Sets 及 Ordered Sets 数据类型操作  
+    - 原子 – Redis的所有操作都是原子性的，同时Redis还支持对几个操作全并后的原子性执行  
+    - 丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性   
 
-### 项目阐述——spring boot 整合多个日志框架：Log4j、Log4j2、Logback
-   ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/logging.png?raw=true)
-   ![image](https://github.com/timebusker/spring-boot/raw/master/static/spring-boot-3-logs/SLF4J.png?raw=true)
- 
- + #### [spring-boot 整合Log4j](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-Log4j/)
-   * spring-boot 1.4.x.RELEASE 将不再支持
-   * Log4j配置说明
-   * Log4j配置信息
-   * 配置多环境不同日志级别
-	 
- + #### [spring-boot 整合Log4j2](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-Log4j2/)
-   * Log4j2配置说明
-   * Log4j2配置信息
-   * 配置多环境不同日志级别
-   
- + #### [spring-boot 整合Logback](https://github.com/timebusker/spring-boot/tree/master/spring-boot-3-logs/spring-boot-3-logs-Logback/)
-   * spring boot 1.4.X默认日志框架为 SLF4J+Logback
-   * Logback 配置信息
-   * 配置多环境不同日志级别
-		 
-----
+- ##### [Redis简单使用](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-sample/)
+
+- ##### [Redis作Cache](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-cache)
+
+- ##### [Redis作Session](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-session)
+
+- ##### [Redis作MQ](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-mq)
+
+- ##### [Redis作集群](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-cluster)
+
+
 
 ### 相关文章
- - [混乱的 Java 日志体系](http://note.youdao.com/noteshare?id=8ee5d113de15c2bee1d36be76dddd717)
- - [为什么要使用SLF4J而不是Log4J](http://note.youdao.com/noteshare?id=f47db61d63b5254c76cd9404ef5c83e6)
- - [在 Web 应用中增加用户跟踪功能——学习在多线程环境下 Apache Log4j 的 NDC和MDC 开发](http://note.youdao.com/noteshare?id=9e15b0c68bedf37147965b213203de99)
- - [log4j+logback+slf4j+commons-logging的关系与调试](http://www.cnblogs.com/zhuawang/p/3999235.html)
+
+ - [Redis 教程](http://www.runoob.com/redis/redis-intro.html)   
+ - [Spring Boot with Redis](http://www.jianshu.com/p/a2ab17707eff)   
+ - [Spring Boot中使用Redis数据库](http://blog.didispace.com/springbootredis/)    

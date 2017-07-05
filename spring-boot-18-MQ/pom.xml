@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>cn.timebusker</groupId>
@@ -10,12 +11,14 @@
 	<packaging>pom</packaging>
 	<name>spring-boot-18-MQ</name>
 	<description>spring boot 消息队列实现</description>
+	
 	<modules>
 		<module>spring-boot-18-MQ-activemq</module>
-    <module>spring-boot-18-MQ-rabbitmq</module>
-    <module>spring-boot-18-MQ-rocketmq</module>
-    <module>spring-boot-18-MQ-kafka</module>
-  </modules>
+		<module>spring-boot-18-MQ-rabbitmq</module>
+		<module>spring-boot-18-MQ-rocketmq</module>
+		<module>spring-boot-18-MQ-kafka</module>
+	</modules>
+	
 	<dependencies>
 		<!-- 引入Web模块，需添加spring-boot-starter-web模块�? -->
 		<dependency>
