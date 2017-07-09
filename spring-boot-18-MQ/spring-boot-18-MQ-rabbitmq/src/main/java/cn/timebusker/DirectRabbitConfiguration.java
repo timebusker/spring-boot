@@ -1,4 +1,4 @@
-package cn.timebusker.mq.direct;
+package cn.timebusker;
 
 import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Bean;
@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class DirectRabbitConfiguration {
-
+	
 	/**
 	 * Direct:RabbitMQ默认的 Exchange(消息交换机)
 	 * 
@@ -15,7 +15,7 @@ public class DirectRabbitConfiguration {
 	 * 
 	 * 2.如果vhost中不存在RouteKey中指定的队列名，则该消息会被抛弃。
 	 */
-	
+
 	@Bean("mineQueue")
 	public Queue queue() {
 		return new Queue("timebusker.queue");
