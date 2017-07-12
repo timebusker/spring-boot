@@ -50,4 +50,9 @@ public class MessageEntity implements Serializable {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
+
+	@Override
+	public String toString() {
+		return "消息信息为：\t 消息编号" + messgeId + "\t消息内容" + context + "\t消息备注信息" + remark;
+	}
 }

@@ -1,18 +1,19 @@
 package cn.timebusker.mq.sample;
 
 import com.rabbitmq.client.*;
+
 import java.io.IOException;
 
 public class MessageConsumer {
 
-	private final static String QUEUE_NAME = "SAMPLE-RABBITMQ";
+	private final static String ROUTING_KEY = "SAMPLE_RABBITMQ";
 
 	public static void main(String[] argv) throws Exception {
 		ConnectionFactory factory = new ConnectionFactory();
-		factory.setHost("localhost");
+		factory.setHost("127.0.0.1");
 		Connection connection = factory.newConnection();
 		Channel channel = connection.createChannel();
-		channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+		channel.queueDeclare(ROUTING_KEY, false, false, false, null);
 		System.out.println("C [*] Waiting for messages. To exit press CTRL+C");
 		Consumer consumer = new DefaultConsumer(channel) {
 			@Override
@@ -21,6 +22,6 @@ public class MessageConsumer {
 				System.out.println("Consumer [x] Received '" + message + "'");
 			}
 		};
-		channel.basicConsume(QUEUE_NAME, true, consumer);
+		channel.basicConsume(ROUTING_KEY, true, consumer);
 	}
 }
