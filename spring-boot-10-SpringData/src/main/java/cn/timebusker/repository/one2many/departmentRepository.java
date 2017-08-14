@@ -1,9 +1,8 @@
 package cn.timebusker.repository.one2many;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import cn.timebusker.model.one2many.department;
+import cn.timebusker.repository.BasicRepository;
 
-public interface departmentRepository extends JpaRepository<department, Long> {
+public interface departmentRepository extends BasicRepository<department, Long> {
 
 }

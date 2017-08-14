@@ -1,13 +1,13 @@
 package cn.timebusker.repository.one2many;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import cn.timebusker.model.one2many.employee;
+import cn.timebusker.repository.BasicRepository;
 
-public interface employeeRepository extends JpaRepository<employee, Long> {
+public interface employeeRepository extends BasicRepository<employee, Long> {
 
 	@Modifying(clearAutomatically = true) 
 	@Query("update employee set empName =?1 "			
