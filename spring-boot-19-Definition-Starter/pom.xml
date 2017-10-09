@@ -8,16 +8,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spring-boot-19-Definition-Starter</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
-    <name>spring-boot-19-Definition-Starter</name>
-    <url>http://maven.apache.org</url>
+    <distributionManagement>
+        <site>
+            <id>website</id>
+            <url>scp://webhost.company.com/www/website</url>
+        </site>
+    </distributionManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencies>
-       
-    </dependencies>
 </project>

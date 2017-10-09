@@ -23,7 +23,8 @@
         <module name="spring-boot-18-MQ-kafka" />
         <module name="spring-boot-18-MQ-rabbitmq" />
         <module name="spring-boot-18-MQ-rocketmq" />
-        <module name="spring-boot-19-Definition-Starter" />
+        <module name="spring-boot-19-Definition-Starter-Service" />
+        <module name="spring-boot-19-Definition-Starter-Service-Test" />
         <module name="spring-boot-2-RESTful" />
         <module name="spring-boot-3-logs-Log4j" />
         <module name="spring-boot-3-logs-Log4j2" />
@@ -58,7 +59,10 @@
       <module name="spring-boot-18-MQ-kafka" target="1.8" />
       <module name="spring-boot-18-MQ-rabbitmq" target="1.8" />
       <module name="spring-boot-18-MQ-rocketmq" target="1.8" />
+      <module name="spring-boot-19-Definition-Calculator-Starter" target="1.8" />
       <module name="spring-boot-19-Definition-Starter" target="1.8" />
+      <module name="spring-boot-19-Definition-Starter-Service" target="1.8" />
+      <module name="spring-boot-19-Definition-Starter-Service-Test" target="1.8" />
       <module name="spring-boot-2-RESTful" target="1.8" />
       <module name="spring-boot-3-logs" target="1.8" />
       <module name="spring-boot-3-logs-Log4j" target="1.8" />

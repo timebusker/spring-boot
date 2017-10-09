@@ -12,5 +12,4 @@
 			<appender-ref ref="CONSOLE" />
 		</root>
 	</springProfile>
-
 </configuration>
