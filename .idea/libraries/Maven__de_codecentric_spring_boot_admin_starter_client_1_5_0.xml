@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: de.codecentric:spring-boot-admin-starter-client:1.5.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/codecentric/spring-boot-admin-starter-client/1.5.0/spring-boot-admin-starter-client-1.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/de/codecentric/spring-boot-admin-starter-client/1.5.0/spring-boot-admin-starter-client-1.5.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/codecentric/spring-boot-admin-starter-client/1.5.0/spring-boot-admin-starter-client-1.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

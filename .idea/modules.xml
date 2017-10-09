@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring-boot.iml" filepath="$PROJECT_DIR$/.idea/spring-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-1-QuickStart/spring-boot-1-QuickStart.iml" filepath="$PROJECT_DIR$/spring-boot-1-QuickStart/spring-boot-1-QuickStart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-10-SpringData/spring-boot-10-SpringData.iml" filepath="$PROJECT_DIR$/spring-boot-10-SpringData/spring-boot-10-SpringData.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-11-SpringSecurity/spring-boot-11-SpringSecurity.iml" filepath="$PROJECT_DIR$/spring-boot-11-SpringSecurity/spring-boot-11-SpringSecurity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-12-Swagger2/spring-boot-12-Swagger2.iml" filepath="$PROJECT_DIR$/spring-boot-12-Swagger2/spring-boot-12-Swagger2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-13-MyBatis/spring-boot-13-MyBatis.iml" filepath="$PROJECT_DIR$/spring-boot-13-MyBatis/spring-boot-13-MyBatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-14-JdbcTemplate/spring-boot-14-JdbcTemplate.iml" filepath="$PROJECT_DIR$/spring-boot-14-JdbcTemplate/spring-boot-14-JdbcTemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-15-Redis/spring-boot-15-Redis.iml" filepath="$PROJECT_DIR$/spring-boot-15-Redis/spring-boot-15-Redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-15-Redis/spring-boot-15-Redis-cache/spring-boot-15-Redis-cache.iml" filepath="$PROJECT_DIR$/spring-boot-15-Redis/spring-boot-15-Redis-cache/spring-boot-15-Redis-cache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-15-Redis/spring-boot-15-Redis-mq/spring-boot-15-Redis-mq.iml" filepath="$PROJECT_DIR$/spring-boot-15-Redis/spring-boot-15-Redis-mq/spring-boot-15-Redis-mq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-15-Redis/spring-boot-15-Redis-sample/spring-boot-15-Redis-sample.iml" filepath="$PROJECT_DIR$/spring-boot-15-Redis/spring-boot-15-Redis-sample/spring-boot-15-Redis-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-16-Transcation/spring-boot-16-Transcation.iml" filepath="$PROJECT_DIR$/spring-boot-16-Transcation/spring-boot-16-Transcation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-17-monitor/spring-boot-17-monitor.iml" filepath="$PROJECT_DIR$/spring-boot-17-monitor/spring-boot-17-monitor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-17-monitor/spring-boot-17-monitor-AdminClient/spring-boot-17-monitor-AdminClient.iml" filepath="$PROJECT_DIR$/spring-boot-17-monitor/spring-boot-17-monitor-AdminClient/spring-boot-17-monitor-AdminClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-17-monitor/spring-boot-17-monitor-AdminServer/spring-boot-17-monitor-AdminServer.iml" filepath="$PROJECT_DIR$/spring-boot-17-monitor/spring-boot-17-monitor-AdminServer/spring-boot-17-monitor-AdminServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-17-monitor/spring-boot-17-monitor-actuator/spring-boot-17-monitor-actuator.iml" filepath="$PROJECT_DIR$/spring-boot-17-monitor/spring-boot-17-monitor-actuator/spring-boot-17-monitor-actuator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ.iml" filepath="$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-activemq/spring-boot-18-MQ-activemq.iml" filepath="$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-activemq/spring-boot-18-MQ-activemq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-kafka/spring-boot-18-MQ-kafka.iml" filepath="$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-kafka/spring-boot-18-MQ-kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-rabbitmq/spring-boot-18-MQ-rabbitmq.iml" filepath="$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-rabbitmq/spring-boot-18-MQ-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-rocketmq/spring-boot-18-MQ-rocketmq.iml" filepath="$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-rocketmq/spring-boot-18-MQ-rocketmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter.iml" filepath="$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-2-RESTful/spring-boot-2-RESTful.iml" filepath="$PROJECT_DIR$/spring-boot-2-RESTful/spring-boot-2-RESTful.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs.iml" filepath="$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs-Log4j/spring-boot-3-logs-Log4j.iml" filepath="$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs-Log4j/spring-boot-3-logs-Log4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs-Log4j2/spring-boot-3-logs-Log4j2.iml" filepath="$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs-Log4j2/spring-boot-3-logs-Log4j2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs-Logback/spring-boot-3-logs-Logback.iml" filepath="$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs-Logback/spring-boot-3-logs-Logback.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-4-Scheduled/spring-boot-4-Scheduled.iml" filepath="$PROJECT_DIR$/spring-boot-4-Scheduled/spring-boot-4-Scheduled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-5-Async/spring-boot-5-Async.iml" filepath="$PROJECT_DIR$/spring-boot-5-Async/spring-boot-5-Async.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-6-GlobalException/spring-boot-6-GlobalException.iml" filepath="$PROJECT_DIR$/spring-boot-6-GlobalException/spring-boot-6-GlobalException.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-7-EhCache/spring-boot-7-EhCache.iml" filepath="$PROJECT_DIR$/spring-boot-7-EhCache/spring-boot-7-EhCache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-8-AOP/spring-boot-8-AOP.iml" filepath="$PROJECT_DIR$/spring-boot-8-AOP/spring-boot-8-AOP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-9-JavaMailSender/spring-boot-9-JavaMailSender.iml" filepath="$PROJECT_DIR$/spring-boot-9-JavaMailSender/spring-boot-9-JavaMailSender.iml" />
+    </modules>
+  </component>
+</project>
