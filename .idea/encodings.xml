@@ -24,10 +24,10 @@
     <file url="file://$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-rocketmq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter-Service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter-Service-Test" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter-Service-Test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter-Service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter-Service-Test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-2-RESTful" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-3-logs" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs-Log4j" charset="UTF-8" />

@@ -35,6 +35,7 @@
         <module name="spring-boot-7-EhCache" />
         <module name="spring-boot-8-AOP" />
         <module name="spring-boot-9-JavaMailSender" />
+        <module name="springboot19DefinitionStarterServiceTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -74,6 +75,7 @@
       <module name="spring-boot-7-EhCache" target="1.8" />
       <module name="spring-boot-8-AOP" target="1.8" />
       <module name="spring-boot-9-JavaMailSender" target="1.8" />
+      <module name="springboot19DefinitionStarterServiceTest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

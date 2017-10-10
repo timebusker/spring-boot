@@ -9,6 +9,10 @@
 
     <artifactId>spring-boot-19-Definition-Starter</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>spring-boot-19-Definition-Starter-Service</module>
+        <module>spring-boot-19-Definition-Starter-Service-Test</module>
+    </modules>
 
     <distributionManagement>
         <site>

@@ -24,7 +24,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-rabbitmq/spring-boot-18-MQ-rabbitmq.iml" filepath="$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-rabbitmq/spring-boot-18-MQ-rabbitmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-rocketmq/spring-boot-18-MQ-rocketmq.iml" filepath="$PROJECT_DIR$/spring-boot-18-MQ/spring-boot-18-MQ-rocketmq/spring-boot-18-MQ-rocketmq.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter.iml" filepath="$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter-Service/spring-boot-19-Definition-Starter-Service.iml" filepath="$PROJECT_DIR$/spring-boot-19-Definition-Starter-Service/spring-boot-19-Definition-Starter-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter-Service/spring-boot-19-Definition-Starter-Service.iml" filepath="$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter-Service/spring-boot-19-Definition-Starter-Service.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter-Service-Test/spring-boot-19-Definition-Starter-Service-Test.iml" filepath="$PROJECT_DIR$/spring-boot-19-Definition-Starter-Service-Test/spring-boot-19-Definition-Starter-Service-Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-2-RESTful/spring-boot-2-RESTful.iml" filepath="$PROJECT_DIR$/spring-boot-2-RESTful/spring-boot-2-RESTful.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs.iml" filepath="$PROJECT_DIR$/spring-boot-3-logs/spring-boot-3-logs.iml" />
@@ -37,6 +37,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-boot-7-EhCache/spring-boot-7-EhCache.iml" filepath="$PROJECT_DIR$/spring-boot-7-EhCache/spring-boot-7-EhCache.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-8-AOP/spring-boot-8-AOP.iml" filepath="$PROJECT_DIR$/spring-boot-8-AOP/spring-boot-8-AOP.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-9-JavaMailSender/spring-boot-9-JavaMailSender.iml" filepath="$PROJECT_DIR$/spring-boot-9-JavaMailSender/spring-boot-9-JavaMailSender.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter-Service-Test/springboot19DefinitionStarterServiceTest.iml" filepath="$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter-Service-Test/springboot19DefinitionStarterServiceTest.iml" />
     </modules>
   </component>
 </project>

@@ -79,8 +79,6 @@
         <module>spring-boot-17-monitor</module>
         <module>spring-boot-18-MQ</module>
         <module>spring-boot-19-Definition-Starter</module>
-        <module>spring-boot-19-Definition-Starter-Service</module>
-        <module>spring-boot-19-Definition-Starter-Service-Test</module>
     </modules>
 
     <repositories>
