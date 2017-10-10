@@ -55,4 +55,7 @@ Spring Boot 项目旨在简化创建产品级的 Spring 应用和服务。你可
 #### 第十七个模块：[......................................应用的健康监控](https://github.com/timebusker/spring-boot/tree/master/spring-boot-17-monitor/)
 
 #### 第十八个模块：[......................................消息队列实践](https://github.com/timebusker/spring-boot/tree/master/spring-boot-18-MQ/)
+
+#### 第十九个模块：[......................................Spring Boot自定义Starter](https://github.com/timebusker/spring-boot/tree/master/spring-boot-19-Definition-Starter/)
+
 ----
