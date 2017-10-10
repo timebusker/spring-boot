@@ -24,7 +24,7 @@
         <module name="spring-boot-18-MQ-rabbitmq" />
         <module name="spring-boot-18-MQ-rocketmq" />
         <module name="spring-boot-19-Definition-Starter-Service" />
-        <module name="spring-boot-19-Definition-Starter-Service-Test" />
+        <module name="spring-boot-19-Definition-Starter-Test" />
         <module name="spring-boot-2-RESTful" />
         <module name="spring-boot-3-logs-Log4j" />
         <module name="spring-boot-3-logs-Log4j2" />
@@ -35,7 +35,6 @@
         <module name="spring-boot-7-EhCache" />
         <module name="spring-boot-8-AOP" />
         <module name="spring-boot-9-JavaMailSender" />
-        <module name="springboot19DefinitionStarterServiceTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -64,6 +63,7 @@
       <module name="spring-boot-19-Definition-Starter" target="1.8" />
       <module name="spring-boot-19-Definition-Starter-Service" target="1.8" />
       <module name="spring-boot-19-Definition-Starter-Service-Test" target="1.8" />
+      <module name="spring-boot-19-Definition-Starter-Test" target="1.8" />
       <module name="spring-boot-2-RESTful" target="1.8" />
       <module name="spring-boot-3-logs" target="1.8" />
       <module name="spring-boot-3-logs-Log4j" target="1.8" />

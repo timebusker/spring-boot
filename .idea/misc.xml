@@ -48,6 +48,7 @@
       <set>
         <option value="$PROJECT_DIR$/spring-boot-19-Definition-Starter-Service-Test/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-19-Definition-Starter/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-19-Definition-Starter/spring-boot-19-Definition-Starter-Service-Test/pom.xml" />
       </set>
     </option>
   </component>
