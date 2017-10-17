@@ -4,3 +4,4 @@ target/
 .project
 logs/
 ./logs/
+.idea
