@@ -30,7 +30,6 @@
         </dependencies>
     </dependencyManagement>
 
-
     <build>
         <finalName>spring-boot</finalName>
         <!-- spring-boot-maven-plugin 提供了许多非常便捷的插件，它可以在classpath下收集很多的JAR包， 并能够建立一个独立可运行的JAR包，这让他能够非常方便的运行你的系统服务�?? spring-boot-maven-plugin插件
