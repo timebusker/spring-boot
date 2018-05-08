@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * @DESC:${DESCRIPTION}
+ * @DESC:简单测试类
  * @author: timebusker
  * @date:2018/5/3
  */
