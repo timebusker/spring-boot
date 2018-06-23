@@ -1,4 +1,5 @@
 ----
+### [Spring Security教程系列请移步到这里](https://github.com/timebusker/Spring-Security-In-Action)
 ## [spring-boot-11-SpringSecurity 集成SpringSecurity安全框架](https://github.com/timebusker/spring-boot/tree/master/spring-boot-11-SpringSecurity)
 
 ### Spring Security 简介
