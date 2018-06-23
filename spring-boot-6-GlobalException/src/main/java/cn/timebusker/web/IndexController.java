@@ -28,8 +28,8 @@ public class IndexController {
 	}
 
 	@RequestMapping("/mine")
-	public String mine(ModelMap map) throws MineException {
-		logger.info("访问到了 mine ...");
+	public String mine(ModelMap map) {
+		logger.info("访问到了\t\tmine ...");
 		Throwable throwable = new Throwable();
 		throw new MineException("我们访问到了 mine ...", throwable);
 	}
