@@ -72,6 +72,8 @@ Spring Boot 项目旨在简化创建产品级的 Spring 应用和服务。你可
 
 #### 第十九个模块：[......................................Spring Boot自定义Starter](https://github.com/timebusker/spring-boot/tree/master/spring-boot-19-Definition-Starter/)
 
+#### 第二十个模块：[......................................Spring Boot结合Freemaker使用](https://github.com/timebusker/spring-boot/tree/master/spring-boot-20-Freemarker/)
+
 ----  
 
 ### 关于Spring Boot模板引擎   
