@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>freemarker</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: Verdana, Microsoft YaHei, Simsun;
+        line-height: 30px;
+        align-content: left;
+        text-align: left;
+    }
+</style>
+<body>
+<h1>if表达式</h1>
+<ul>
+    <li>if</li>
+    <#assign var = 99/>
+    <#if var == 99>
+        <font color="red">var=99</font>
+    </#if>
+    <br/>
+    <#if var == 99>
+        <font color="red">var=99</font>
+        <#else>
+            <font coloe="green">var!=99</font>
+        </#else>
+    </#if>
+    <br/>
+
+    <#if var &gt; 99>   <!-- &gt;  大于 -->
+        <font color="red">var大于99</font>
+        <#elseif var==99>
+            <font coloe="green">var=99</font>
+            <#else>
+                <font coloe="blue">var小于99</font>
+            </#else>
+        </#elseif>
+    </#if>
+    <br/>
+
+    <li>if多条件 ||，&&，!</li>
+    <#assign var='python'>
+        <#if var =='python' || var =='Java'>
+            <font color="red">python or java</font><br/>
+        </#if>
+        <#if var =='python' && var?length == 6>
+            <font color="yellow">python length 6</font><br/>
+        </#if>
+        <#if (var =='python' && var?length == 6) || (var == 'java')>
+            <font color="black">python length 6或者Java</font><br/><br/>
+        </#if>
+        <#if !((var =='python' && var?length == 6) || (var == 'java'))>
+            <font color="black">python length 6或者Java</font><br/><br/>
+        </#if>
+    </#assign>
+</ul>
+<hr size="10" color="green">
+
+<h1>自定义函数</h1>
+<h2>1.自定义函数(整数排序sort_int)</h2>
+<ul>
+    <#assign myList=[2,5,9,1,0,6,3,1,10,4]/>
+    <li>未排序</li>
+    <#list myList as item>
+        ${item},
+    </#list>
+    <br/>
+    <li>排序</li>
+    <#list sort_int(myList) as item>
+        ${item},
+    </#list>
+</ul>
+<hr size="10" color="red">
+
+<h1>List的指令</h1>
+<h2>1,list常用指令sort升序</h2>
+<ul>
+    <#assign myList=[0,3,7,9,1,4,8,6,2,5]/>
+    <#list myList?sort as item>
+        ${item_index}:${item} <br/>
+    </#list>
+
+    <br/>
+</ul>
+<hr size="10" color="blue">
+
+<h1>List的指令</h1>
+<h2>2,list常用指令resverse倒序</h2>
+<ul>
+    <#assign myList1=[0,3,7,9,1,4,8,6,2,5]/>
+    <#list myList1?sort?reverse as item>
+        ${item_index}:${item} <br/>
+    </#list>
+    长度：${myList1?size}<br/>
+    下标取值：${myList1[3]}<br/>
+    <br/>
+</ul>
+</body>
+</html>

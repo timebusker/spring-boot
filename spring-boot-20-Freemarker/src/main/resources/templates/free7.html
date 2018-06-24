@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FreeMarker</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: Verdana, Microsoft YaHei, Simsun;
+        line-height: 30px;
+        align-content: left;
+        text-align: left;
+    }
+</style>
+<body>
+<h1>macro,nested,return:实战demo</h1>
+<h2>1.macro:宏指令</h2>
+<ul>
+    <li>FreeMarker:无参数的macro</li>
+    <div>
+        <#macro test>
+            <font color="red" size="18px">我是无参数的macro</font>
+        </#macro>
+        <@test/>
+    </div>
+    <li>Freemarker2:有参数的macro</li>
+    <div>
+        <#macro test param1 param2>
+            <font color="blue" size="18px">我是有参数的macro,paeam1=${param1},param2=${param2}</font>
+            <br/>
+        </#macro>
+        <@test param1="java" param2="python"/>
+    </div>
+    <li>Freemarker3:有参数的macro</li>
+    <div>
+        <#macro test param1 param2="JavaScript">
+            <font color="blue" size="18px">我是有参数的macro,paeam1=${param1},param2=${param2}</font>
+            <br/>
+        </#macro>
+        <@test param1="java" param2="hello python"/>
+    </div>
+    <li>Freemarker4:有多个参数的macro</li>
+    <div>
+        <#macro test param1 param2="python" paramExt...>
+            <font color="green" size="18px">我是有参数的macro,paeam1=${param1},param2=${param2}</font>
+            <br/>
+            <font color="blue" size="18px">${paramExt['param3']}</font>
+            <font color="blue" size="18px">${paramExt['param4']}</font>
+        </#macro>
+        <@test param1="java" param2="python" param3="nodejs" param4="html"/>
+    </div>
+</ul>
+<hr size="10" color="red">
+<h2>2,nested</h2>
+<div>
+    <ul>
+        <#macro test param1="java">
+            ${param1}<br/>
+            <#nested param1,"我的nested参数"/>
+            <br/>
+        </#macro>
+
+        <li>调用</li>
+        <div>
+            <@test param1="java";loopVar1,loopVar2>
+            <font color="green" size="18px">hello ${loopVar1},${loopVar2}</font><br/>
+            <@test/>
+
+            <@test param1="python"; loopVar1>
+            hello ${loopVar1}<br/>
+            <@test/>
+        </div>
+    </ul>
+    <hr size="10" color="pink">
+    <div>
+        <h2>3,函数</h2>
+        <ul>
+            <#function doAdd param1 param2>
+                <#return param1+param2/>
+            </#function>
+            <li>调用</li>
+            <div>你好，我是调用${doAdd(100,100)}</div>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

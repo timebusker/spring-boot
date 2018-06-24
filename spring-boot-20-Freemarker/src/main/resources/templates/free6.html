@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>freemarker内建函数</title>
+</head>
+<style type="text/css">
+	body {
+		font-family: Verdana, Microsoft YaHei, Simsun;
+		line-height: 30px;
+		align-content: left;
+		text-align: left;
+	}
+</style>
+<body>
+	<h1>内建函数</h1>
+	<ul>
+		<h2>1,字符串内建函数</h2>
+		<#list "a|b|c|d"?split("|") as item>
+		<li>${item}</li>
+		</#list>
+	</ul>
+	<hr size="10" color="red">
+
+	<h1>字符串转日期</h1>
+	<ul>
+		<#assign var1="23/02/2017" ?date("MM/dd/yyyy")/> 
+		<#assign var2="11:34:33" ?time("HH:mm:ss")/> 
+		<#assign var3="2017-02-23 11:35 PM" ?datetime("yyyy-MM-dd hh:mm")/>
+		<li>${var1}</li>
+		<li>${var2}</li>
+		<li>${var3}</li>
+	</ul>
+	<hr size="10" color="blue">
+
+	<h1>数字类型的内建函数</h1>
+	<ul>
+		<#assign numVar1=314.5662789 />
+		<li>格式化：${numVar1?string("0.##")}</li> 
+		<li>四舍五入：${numVar1?round}</li> 
+		<li>去掉小数点：${numVar1?floor}</li> 
+		<li>进1：${numVar1?ceiling}</li>
+	</ul>
+	<hr size="10" color="black">
+
+	<h1>list内建函数</h1>
+	<ul>
+		<#assign listVar1=[1,2,3,4,11,12,13,14,21,22,23,24] />
+		
+		<li>分块处理取长度：${listVar1?chunk(4)?size}</li>
+		<li>长度：${listVar1?size}</li>
+		<#list listVar1?chunk(4)?last as item>
+		  <li>${item}</li>
+		</#list>
+		<li>取list第一个值：${listVar1?first}</li>
+		<li>取list最后一个值：${listVar1?last}</li>
+	</ul>
+	<hr size="10" color="green">
+
+	<h1>其他内建函数</h1>
+	<ul>
+		<#assign sVar = 'helloworld'/>
+		<li>${sVar?is_number?string('yes','no')}</li>
+		<li>${sVar?has_content?string('yes','no')}</li>
+		<li>${"1"+"2"?eval}</li>
+		<li>${(1+2)?eval}</li>
+		<li>${"1"+"2"?is_string?string('yes','no')}</li>
+		<li>${("1"+"2")?is_string?string('yes','no')}</li>
+	</ul>
+</body>
+</html>

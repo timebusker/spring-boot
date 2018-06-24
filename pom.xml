@@ -15,6 +15,13 @@
         <version>1.4.5.RELEASE</version>
     </parent>
 
+    <properties>
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
     <!-- 全局依赖设置：引入依赖会自动传递到子模块中 -->
     <dependencies>
     </dependencies>
@@ -76,6 +83,7 @@
         <module>spring-boot-17-monitor</module>
         <module>spring-boot-18-MQ</module>
         <module>spring-boot-19-Definition-Starter</module>
+        <module>spring-boot-20-Freemarker</module>
     </modules>
 
     <repositories>

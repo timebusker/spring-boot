@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>freemarker</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: Verdana, Microsoft YaHei, Simsun;
+        line-height: 30px;
+        align-content: left;
+        text-align: left;
+    }
+</style>
+<body>
+<h1>freemarker遍历map集合</h1>
+<ul>
+    <li>集合map</li>
+    <#list map?keys as key>
+        <font color="green" size="20px">${key}:${map[key]}</font><br/>
+    </#list>
+</ul>
+<hr size="10" color="red">
+<h3>switch语句</h3>
+<ul>
+    <li>switch,case,break,default</li>
+    <#assign var = 8/>
+    <#switch var>
+        <#case 1>星期一
+            <#break/>
+        </#case>
+        <#case 2>星期二
+            <#break/>
+        </#case>
+        <#case 3>星期三
+            <#break/>
+        </#case>
+        <#case 4>星期四
+            <#break/>
+        </#case>
+        <#case 5>星期五
+            <#break/>
+        </#case>
+        <#case 6>星期六
+            <#break/>
+        </#case>
+        <#case 7>星期日
+            <#break/>
+        </#case>
+        <#default>无效的星期</#default>
+    </#switch>
+</ul>
+<hr size="10" color="blue">
+<ul>
+    <li>switch,case,break,default</li>
+    <#assign var = 'java'/>
+    <#switch var>
+        <#case 'java'>我是java
+            <#break/>
+        </#case>
+        <#case 'python'>我是python
+            <#break/>
+        </#case>
+        <#case 'C'>我是C语言
+            <#break/>
+        </#case>
+        <#default>我是谁？谁是我？</#default>
+    </#switch>
+</ul>
+</body>
+</html>

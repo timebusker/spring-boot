@@ -21,10 +21,6 @@
         </site>
     </distributionManagement>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <dependencies>
         <!-- 日志配置开始 -->
         <!-- 加上几个重要的实现适配器log4j-over-slf4j、log4j-over-slf4j、jul-to-slf4j， 然后jboss-logging部分也进行了统一的版本控制。同时删除及exclude掉所有log4j、commons-logging的各个版本。 适配器和具体日志实现，不能共存，否则适配器不生效。这样的话，我们只有logback配置文件即可，因为log4j的输出已经委托给了slf4j（通过log4j-over-slf4j），而slf4j的默认实现是logbac -->

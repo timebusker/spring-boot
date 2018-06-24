@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>timebusker</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: Verdana, Microsoft YaHei, Simsun;
+        line-height: 30px;
+        align-content: left;
+        text-align: left;
+    }
+</style>
+<body>
+<h3>取值：</h3>
+<hr size="10" color="blue">
+<ul>
+    <li>整数：<font color="red">${intVar}</font></li>
+    <li>长整数：<font color="blue">${LongVar}</font></li>
+    <li>双精度：<font color="pink">${doubleVar}</font></li>
+    <li>字符串：<font color="yellow">${StringVar}</font></li>
+    <li>布尔值: <font color="green">${booleanVar?string('yes','no')}</font></li>
+    <li>日期类型Java.Util.Date:<font color="red">${dateVar1?string('yyyy-MM-dd HH:mm:ss')}</font></li>
+    <li>空值：<font color="pink">${nullVar1!}</font></li>
+    <li>空值：<font color="green">${nullVar!'我是默认值'}</font></li>
+    <li>不存在的变量：<font color="blue">${变量!'我是默认变量'}</font></li>
+    <li>不存在的变量1：<font color="red">${free!'我是默认变量'}</font></li>
+</ul>
+<hr size="10" color="blue">
+<ul>
+    <li>赋值&运算</li>
+    <#assign a=100/>
+    a = <font color="red">${a}</font><br/>
+    a+100=<font coloe="blue">${a+100}</font><br/>
+</ul>
+</body>
+</html>

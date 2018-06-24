@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>timebusker</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: Verdana, Microsoft YaHei, Simsun;
+        line-height: 30px;
+        align-content: left;
+        text-align: left;
+    }
+</style>
+<body>
+<h1>自定义指令</h1>
+<h2>1.用户123456 是否拥有admin角色，并且返回admin的权限</h2>
+<ul>
+    <@role user='123456' role='admin';result1,result2>
+    <#if result1>
+        我的角色是<font color="red" size="18px">admin</font><br/>
+    </#if>
+    我拥有的权限是：
+    <font color="blue" size="18px">
+        <#list result2 as item>
+            ${item},
+        </#list>
+    </font>
+</ul>
+</body>
+</html>

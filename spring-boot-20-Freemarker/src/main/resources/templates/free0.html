@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>freemarker</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: Verdana, Microsoft YaHei, Simsun;
+        line-height: 30px;
+        align-content: left;
+        text-align: left;
+    }
+</style>
+<body>
+<h3>${username}</h3>
+<#assign var="hello spring boot 学习你很开心！">
+    <font size="18px">${var}</font>
+</#assign>
+<hr size="10" coloe="red">
+
+<h1>字符串</h1>
+<h2>字符串常用内建函数</h2>
+<ul>
+    <#assign a='hello'>
+        <#assign b='world!'>
+            <li>连接</li>
+            <font color="red" size="18px">${a+b}</font>
+            <br/>
+            <li>截取</li>
+            <font color="blue" size="18px">${(a+b)?substring(5,8)}</font>
+            <br/>
+            <li>长度</li>
+            <font color="red" size="18px">${(a+b)?length}</font>
+            <br/>
+            <li>大写</li>
+            <font color="blue" size="18px">${(a+b)?upper_case}</font>
+            <br/>
+            <li>小写</li>
+            <font color="red" size="18px">${(a+b)?lower_case}</font>
+            <br/>
+            <li>index_of</li>
+            <font color="blue" size="18px">${(a+b)?index_of('w')}</font>
+            <br/>
+            <li>replace</li>
+            <font color="red" size="18px">${(a+b)?replace('o','abc')}</font>
+            <br/>
+            <li>last_index_of</li>
+            <font color="blue" size="18px">${(a+b)?last_index_of('o')}</font>
+            <br/>
+        </#assign>
+    </#assign>
+</ul>
+</body>
+</html>
