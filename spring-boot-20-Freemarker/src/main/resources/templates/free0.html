@@ -14,42 +14,30 @@
 </style>
 <body>
 <h3>${username}</h3>
-<#assign var="hello spring boot 学习你很开心！">
-    <font size="18px">${var}</font>
-</#assign>
+<#assign var="使用assign指令你可以创建一个新的变量，或者替换一个已经存在的变量"/>
+<font>${var}</font>
 <hr size="10" coloe="red">
 
-<h1>字符串</h1>
-<h2>字符串常用内建函数</h2>
+<h2>字符串</h2>
+<h3>字符串常用内建函数</h3>
 <ul>
-    <#assign a='hello'>
-        <#assign b='world!'>
-            <li>连接</li>
-            <font color="red" size="18px">${a+b}</font>
-            <br/>
-            <li>截取</li>
-            <font color="blue" size="18px">${(a+b)?substring(5,8)}</font>
-            <br/>
-            <li>长度</li>
-            <font color="red" size="18px">${(a+b)?length}</font>
-            <br/>
-            <li>大写</li>
-            <font color="blue" size="18px">${(a+b)?upper_case}</font>
-            <br/>
-            <li>小写</li>
-            <font color="red" size="18px">${(a+b)?lower_case}</font>
-            <br/>
-            <li>index_of</li>
-            <font color="blue" size="18px">${(a+b)?index_of('w')}</font>
-            <br/>
-            <li>replace</li>
-            <font color="red" size="18px">${(a+b)?replace('o','abc')}</font>
-            <br/>
-            <li>last_index_of</li>
-            <font color="blue" size="18px">${(a+b)?last_index_of('o')}</font>
-            <br/>
-        </#assign>
-    </#assign>
+    <#assign a='hello'/>
+    <#assign b='world!'/>
+    <li>连接: <font color="red">${a+b}</font></li>
+
+    <li>截取:<font color="blue">${(a+b)?substring(5,8)}</font></li>
+
+    <li>长度:<font color="red">${(a+b)?length}</font></li>
+
+    <li>大写:<font color="blue">${(a+b)?upper_case}</font></li>
+
+    <li>小写:<font color="red">${(a+b)?lower_case}</font></li>
+
+    <li>index_of:<font color="blue">${(a+b)?index_of('w')}</font></li>
+
+    <li>replace:<font color="red">${(a+b)?replace('o','abc')}</font></li>
+
+    <li>last_index_of:<font color="blue">${(a+b)?last_index_of('o')}</font></li>
 </ul>
 </body>
 </html>

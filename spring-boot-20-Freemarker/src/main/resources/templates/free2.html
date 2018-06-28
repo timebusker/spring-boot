@@ -13,43 +13,39 @@
     }
 </style>
 <body>
-<h1>freemarker实现遍历list集合</h1>
+<h3>freemarker实现遍历list集合</h3>
 <ul>
     <li>集合list</li>
     <#list programList as item>
-        <font color="blue" size="20px">${item}</font><br/>
+        <lu><font color="blue">${item}</font></lu>
     </#list>
 </ul>
 <hr size="10" color="blue">
 <h1>if表达式</h1>
 <ul>
-    <li>if</li>
-    <#assign var = 99>
+    <li>if :
+        <#assign var = 99/>
         <#if var == 99>
             <font color="red">var=99</font>
         </#if>
         <br/>
         <#if var == 99>
             <font color="red">var=99</font>
-            <#else>
-                <font coloe="green">var!=99</font>
-            </#else>
+            <#else/>
+            <font coloe="green">var!=99</font>
         </#if>
         <br/>
         <#if var &gt; 99>   <!-- &gt;  大于 -->
             <font color="red">var大于99</font>
-            <#elseif var==99>
-                <font coloe="green">var=99</font>
-                <#else>
-                    <font coloe="blue">var小于99</font>
-                </#else>
-            </#elseif>
+            <#elseif var==99/>
+            <font coloe="green">var=99</font>
+            <#else/>
+            <font coloe="blue">var小于99</font>
         </#if>
-    </#assign>
+    </li>
 
-    <br/>
-    <li>if多条件 ||，&&，!</li>
-    <#assign var='python'>
+    <li>if多条件 ||，&&，! :
+        <#assign var='python'/>
         <#if var =='python' || var =='Java'>
             <font color="red">python or java</font><br/>
         </#if>
@@ -62,7 +58,7 @@
         <#if !((var =='python' && var?length == 6) || (var == 'java'))>
             <font color="black">python length 6或者Java</font><br/><br/>
         </#if>
-    </#assign>
+    </li>
 </ul>
 </body>
 </html>
