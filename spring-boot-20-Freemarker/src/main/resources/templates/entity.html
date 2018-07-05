@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>FreeMarker</title>
+</head>
+<style type="text/css">
+    body {
+        font-family: Verdana, Microsoft YaHei, Simsun;
+        line-height: 30px;
+        align-content: left;
+        text-align: left;
+    }
+</style>
+<body>
+<h2>数据绑定</h2>
+<ul>
+    <li>单值数据绑定:_____${sum}</li>
+</ul>
+<hr size="10" color="red">
+<ul>
+    <li>Entity数据绑定:_____${u!"Default"}</li>
+    <li>
+        <span>${u.uid}</span>
+        <span>${u.username}</span>
+        <span>${u.password}</span>
+    </li>
+</ul>
+<hr size="10" color="red">
+<ul>
+    <li>Map数据绑定</li>
+    <#list hu?keys as key>
+        <li>
+            <span>${key}____</span>
+            <span>${hu[key].uid}</span>
+            <span>${hu[key].username}</span>
+            <span>${hu[key].password}</span>
+        </li>
+    </#list>
+</ul>
+<hr size="10" color="red">
+<ul>
+    <li>List数据绑定</li>
+    <#list lu as u>
+        <li>
+            <span>${u.uid}____</span>
+            <span>${u.username}</span>
+            <span>${u.password}</span>
+        </li>
+    </#list>
+</ul>
+</body>
+</html>

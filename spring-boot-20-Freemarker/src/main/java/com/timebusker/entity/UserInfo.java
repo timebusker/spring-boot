@@ -6,14 +6,15 @@ package com.timebusker.entity;
  * @date:2018/6/23
  */
 public class UserInfo {
+    private final static int st = 0;
     private String username;
     private String password;
     private String uid;
 
-    public UserInfo(String username, String password) {
+    public UserInfo(String uid, String username, String password) {
         this.username = username;
         this.password = password;
-        this.uid = System.currentTimeMillis() + "";
+        this.uid = uid;
     }
 
     public String getUsername() {
@@ -42,6 +43,6 @@ public class UserInfo {
 
     @Override
     public String toString() {
-        return String.format("UserInfo:[uid:%s,username:%d,password:d%]", uid, username, password);
+        return String.format("UserInfo:[uid:%s,username:%s,password:%s]", uid, username, password);
     }
 }
