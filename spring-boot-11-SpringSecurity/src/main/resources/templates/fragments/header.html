@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+      th:fragment="header">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Tether core CSS -->
+    <link href="../../css/tether.min.css" th:href="@{/css/tether.min.css}" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+    <!-- Font-Awesome CSS -->
+    <link href="../../css/font-awesome.min.css" th:href="@{/css/font-awesome.min.css}" rel="stylesheet">
+
+    <!-- NProgress CSS -->
+    <link href="../../css/nprogress.css" th:href="@{/css/nprogress.css}" rel="stylesheet">
+
+    <!-- thinker-md CSS -->
+    <link href="../../css/thinker-md.vendor.css" th:href="@{/css/thinker-md.vendor.css}" rel="stylesheet">
+
+    <!-- bootstrap tags CSS -->
+    <link href="../../css/bootstrap-tagsinput.css" th:href="@{/css/jquery.tagsinput.min.css}" rel="stylesheet">
+    
+    <!-- bootstrap chosen CSS -->
+    <link href="../../css/component-chosen.min.css" th:href="@{/css/component-chosen.min.css}" rel="stylesheet">
+
+    <!-- toastr CSS -->
+    <link href="../../css/toastr.min.css" th:href="@{/css/toastr.min.css}" rel="stylesheet">
+    
+    <!-- jQuery image cropping plugin CSS -->
+    <link href="../../css/cropbox.css" th:href="@{/css/cropbox.css}" rel="stylesheet">
+    
+    <!-- Custom styles -->
+    <link href="../../css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+    <link href="../../css/thymeleaf-bootstrap-paginator.css" th:href="@{/css/thymeleaf-bootstrap-paginator.css}"
+          rel="stylesheet">
+    <link href="../../css/blog.css" th:href="@{/css/blog.css}" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarsContainer">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/" th:href="@{~/}">NewStarBlog</a>
+
+        <div class="collapse navbar-collapse" id="navbarsContainer">
+
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{~/users}"  >首页 <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+			<!-- 登录判断 -->
+			<div sec:authorize="isAuthenticated()"  class="row" >
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item">
+					     <span class="nav-link"  sec:authentication="name"></span>
+					 </li>
+				</ul>
+				<form action="/logout" th:action="@{/logout}" method="post">
+					<input class="btn btn-outline-success " type="submit" value="退出">
+				</form>
+            </div>
+
+            <div sec:authorize="isAnonymous()">
+                <a href="/login" th:href="@{~/login}" class="btn btn-outline-success my-2 my-sm-0" type="submit">登录</a>
+            </div>
+        </div>
+
+    </div>
+</nav>
+</body>
+</html>

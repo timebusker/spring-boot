@@ -1,0 +1,95 @@
+/*!
+ * 图片剪切 style.
+ *
+ * @since: 1.0.0
+ * @author Way Lau <https://waylau.com>
+ */
+.crop {
+    display: none;
+}
+
+.crop-input {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.crop-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 59;
+}
+
+.crop-wrap {
+    position: fixed;
+    left: 5%;
+    top: 50%;
+    width: 90%;
+    background-color: #fff;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -moz-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+    -o-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    z-index: 99;
+}
+
+.crop-wrap-content {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    margin: 10px auto;
+}
+
+.crop-wrap-thum {
+    position: absolute;
+/*     LEFT: 20%; */
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    /*background: none repeat scroll 0 0 transparent;*/
+    background: transparent;
+    border: 1px solid rgb(102, 102, 102);
+    -webkit-transform: translate3d(0, -50%, 0);
+    -moz-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+    -o-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    -webkit-box-shadow: 0 0 0 51px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 0 0 51px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 51px rgba(0, 0, 0, 0.4);
+}
+
+.crop-wrap-spinner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+
+.crop-wrap-group {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.crop-wrap-group > a {
+    width: 40%;
+    height: 100%;
+    display: inline-block;
+    background-color: #ff0000;
+    color: #fff;
+}

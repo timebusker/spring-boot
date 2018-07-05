@@ -9,9 +9,11 @@
     <artifactId>spring-boot-11-SpringSecurity</artifactId>
     <name>spring-boot-11-SpringSecurity</name>
     <url>http://maven.apache.org</url>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
     <dependencies>
         <!-- Spring Boot 核心三个模块 START -->
         <!-- 核心模块，包括自动配置支持、日志和YAML -->
@@ -25,6 +27,10 @@
                     <artifactId>spring-boot-starter-logging</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <!-- spring-boot-starter-test：测试模块，包括JUnit、Hamcrest、Mockito -->
         <dependency>
@@ -73,10 +79,6 @@
         </dependency>
 
         <!--Spring Security依赖-->
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-taglibs</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>

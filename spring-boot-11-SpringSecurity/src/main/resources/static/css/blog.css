@@ -1,0 +1,106 @@
+/*!
+ * Blog main style.
+ *
+ * @since: 1.0.0
+ * @author Way Lau <https://waylau.com>
+ */
+/* Footer */
+.blog-footer {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+/* Index content*/
+.blog-content-container {
+    margin-top: 2.0em;
+    background-color: #fff;
+}
+
+/* Index sidebar */
+.blog-avatar-50 {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+/* User space */
+.blog-avatar-100 {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.blog-avatar-230 {
+    border-radius: 10%;
+    height: 230px;
+    width: 230px;
+}
+
+/* blog commit */
+.blog-textarea {
+    border-radius: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 80px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    resize: none;
+}
+
+.blog-label-success {
+	color: #5cb85c;
+}
+  
+.blog-label-error {
+	color: #d9534f;
+}
+
+/* blog avatar */
+.blog-avatar-img {
+  max-width: 100%; 
+}
+
+/* 元素靠右 */
+.blog-right {
+  float: right;
+  margin-right:0px;
+}
+
+.blog-list-group-item {
+	padding: .75rem 1.25rem;
+	border: 1px solid rgba(0,0,0,.125);
+}
+
+
+/* 避免图片超出 */
+article img {
+    max-width: 100%;
+}
+
+
+/* go to top */
+#goToTop{
+  display:block;
+  width:40px;
+  height:40px;
+  position:fixed;
+  bottom:60px;
+  right:10px;
+  text-decoration:none;
+}
+
+#goToTop span{
+  display:block;
+  color:#dddddd;
+}
+
+#goToTop span:hover{
+  color:#cccccc;
+}
+
+#md {
+	height:400px;	
+}

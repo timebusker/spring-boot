@@ -1,0 +1,14 @@
+/*!
+* Override Bootstrap style.
+*
+* @since: 1.0.0
+* @author Way Lau <https://waylau.com>
+*/
+
+.badge {
+  margin-left: auto; 
+}
+
+.hidden { 
+	display: none !important; 
+}
