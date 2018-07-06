@@ -554,9 +554,9 @@ protected final UserDetails retrieveUser(String username,
 
 > 用户表的密码通常使用MD5等不可逆算法加密后存储，为防止彩虹表破解更会先使用一个特定的字符串（如域名）加密，然后再使用一个随机的salt（盐值）加密。
 
- > 特定字符串是程序代码中固定的，salt是每个密码单独随机，一般给用户表加一个字段单独存储，比较麻烦。
+> 特定字符串是程序代码中固定的，salt是每个密码单独随机，一般给用户表加一个字段单独存储，比较麻烦。
 
-  > BCrypt算法将salt随机并混入最终加密后的密码，验证时也无需单独提供之前的salt，从而无需单独处理salt问题。
+> BCrypt算法将salt随机并混入最终加密后的密码，验证时也无需单独提供之前的salt，从而无需单独处理salt问题。
 
 #### BCryptPasswordEncoder 是在哪里使用的？
 登录时用到了 `DaoAuthenticationProvider` ，它有一个方法
@@ -578,27 +578,28 @@ protected final UserDetails retrieveUser(String username,
 
 ### 自定义的 `Filter`   
 Spring Security 默认的过滤器链：[官网位置](http://docs.spring.io/spring-security/site/docs/5.0.0.M1/reference/htmlsingle/#ns-custom-filters)    
-执行顺序|别名|类名称|Namespace Element or Attribute
---|--|--|--|
-1|CHANNEL_FILTER|ChannelProcessingFilter|http/intercept-url@requires-channel
-2|SECURITY_CONTEXT_FILTER|SecurityContextPersistenceFilter|http
-3|CONCURRENT_SESSION_FILTER|ConcurrentSessionFilter|session-management/concurrency-control
-4|HEADERS_FILTER|HeaderWriterFilter|http/headers
-5|CSRF_FILTER|CsrfFilter|http/csrf
-6|LOGOUT_FILTER|LogoutFilter|http/logout
-7|X509_FILTER|X509AuthenticationFilter|http/x509
-8|PRE_AUTH_FILTER|AbstractPreAuthenticatedProcessingFilter( Subclasses)|N/A
-9|CAS_FILTER|CasAuthenticationFilter|N/A
-10|FORM_LOGIN_FILTER|UsernamePasswordAuthenticationFilter|http/form-login
-11|BASIC_AUTH_FILTER|BasicAuthenticationFilter|http/http-basic
-12|SERVLET_API_SUPPORT_FILTER|SecurityContextHolderAwareRequestFilter|http/@servlet-api-provision
-13|JAAS_API_SUPPORT_FILTER|JaasApiIntegrationFilter|http/@jaas-api-provision
-14|REMEMBER_ME_FILTER|RememberMeAuthenticationFilter|http/remember-me
-15|ANONYMOUS_FILTER|AnonymousAuthenticationFilter|http/anonymous
-16|SESSION_MANAGEMENT_FILTER|SessionManagementFilter|session-management
-17|EXCEPTION_TRANSLATION_FILTER|ExceptionTranslationFilter|http
-18|FILTER_SECURITY_INTERCEPTOR|FilterSecurityInterceptor|http
-19|SWITCH_USER_FILTER|SwitchUserFilter|N/A
+  
+|执行顺序|别名|类名称|Namespace Element or Attribute
+|--|--|--|--|
+|1|CHANNEL_FILTER|ChannelProcessingFilter|http/intercept-url@requires-channel
+|2|SECURITY_CONTEXT_FILTER|SecurityContextPersistenceFilter|http
+|3|CONCURRENT_SESSION_FILTER|ConcurrentSessionFilter|session-management/concurrency-control
+|4|HEADERS_FILTER|HeaderWriterFilter|http/headers
+|5|CSRF_FILTER|CsrfFilter|http/csrf
+|6|LOGOUT_FILTER|LogoutFilter|http/logout
+|7|X509_FILTER|X509AuthenticationFilter|http/x509
+|8|PRE_AUTH_FILTER|AbstractPreAuthenticatedProcessingFilter( Subclasses)|N/A
+|9|CAS_FILTER|CasAuthenticationFilter|N/A
+|10|FORM_LOGIN_FILTER|UsernamePasswordAuthenticationFilter|http/form-login
+|11|BASIC_AUTH_FILTER|BasicAuthenticationFilter|http/http-basic
+|12|SERVLET_API_SUPPORT_FILTER|SecurityContextHolderAwareRequestFilter|http/@servlet-api-provision
+|13|JAAS_API_SUPPORT_FILTER|JaasApiIntegrationFilter|http/@jaas-api-provision
+|14|REMEMBER_ME_FILTER|RememberMeAuthenticationFilter|http/remember-me
+|15|ANONYMOUS_FILTER|AnonymousAuthenticationFilter|http/anonymous
+|16|SESSION_MANAGEMENT_FILTER|SessionManagementFilter|session-management
+|17|EXCEPTION_TRANSLATION_FILTER|ExceptionTranslationFilter|http
+|18|FILTER_SECURITY_INTERCEPTOR|FilterSecurityInterceptor|http
+|19|SWITCH_USER_FILTER|SwitchUserFilter|N/A
 
 -------
 自定义的 `Filter` 建议继承 `GenericFilterBean`，本文示例：
