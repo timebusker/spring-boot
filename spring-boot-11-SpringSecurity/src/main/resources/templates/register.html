@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>登录 | timebusker</title>
+    <title>注册 | timebusker</title>
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
 </head>
 
@@ -19,7 +19,7 @@
                     <h3 class="panel-title"><span class="glyphicon glyphicon-console"></span> Login</h3>
                 </div>
                 <div class="panel-body">
-                    <form th:action="@{/login}" method="post">
+                    <form th:action="@{/register}" method="post">
                         <div class="form-group" style="margin-top: 30px">
                             <div class="input-group col-md-6 col-md-offset-3">
                                 <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
@@ -29,25 +29,30 @@
                         <div class="form-group ">
                             <div class="input-group col-md-6 col-md-offset-3">
                                 <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                                <input type="password" class="form-control" name="password" id="password"
-                                       placeholder="密码">
+                                <input type="password" class="form-control" name="password" id="password" placeholder="密码">
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <div class="input-group col-md-6 col-md-offset-3">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+                                <input type="text" class="form-control" name="nickname" id="nickname" placeholder="昵称">
                             </div>
                         </div>
                         <br>
                         <div th:if="${param.error}">
-                            <p style="text-align: center" class="text-danger">登录失败，账号或密码错误!</p>
+                            <p style="text-align: center" class="text-danger">注册失败，账号已存在！</p>
                         </div>
-                        <div th:if="${result}">
-                            <p style="text-align: center" class="text-success" th:text="${result}"></p>
+                        <div th:if="${param.success}">
+                            <p style="text-align: center" class="text-success">注册成功，可以登录了！</p>
                         </div>
                         <div class="form-group">
                             <div class="input-group col-md-6 col-md-offset-3 col-xs-12 ">
-                                <button type="submit" class="btn btn-primary btn-block">登录</button>
+                                <button type="submit" class="btn btn-primary btn-block">注册</button>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="input-group col-md-6 col-md-offset-3" style="text-align: center">
-                                <a href="/register">创建账号</a> | 忘记密码?
+                                <a href="/login">返回登录页面</a>
                             </div>
                         </div>
                     </form>
