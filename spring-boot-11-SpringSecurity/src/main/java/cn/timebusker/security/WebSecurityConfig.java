@@ -1,5 +1,7 @@
 package cn.timebusker.security;
 
+import cn.timebusker.filter.AfterCsrfFilter;
+import cn.timebusker.filter.BeforeLoginFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -7,15 +9,17 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.csrf.CsrfFilter;
 
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private UserDetailsServiceImpl anyUserDetailsServiceImpl;
+    private UserDetailsServiceImpl userDetailsServiceImpl;
 
     @Autowired
-    public void setAnyUserDetailsServiceImpl(UserDetailsServiceImpl anyUserDetailsServiceImpl) {
-        this.anyUserDetailsServiceImpl = anyUserDetailsServiceImpl;
+    public void setAnyUserDetailsServiceImpl(UserDetailsServiceImpl userDetailsServiceImpl) {
+        this.userDetailsServiceImpl = userDetailsServiceImpl;
     }
 
     /**
@@ -29,12 +33,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/").permitAll()
+                .antMatchers("/", "/header.html").permitAll()
                 .antMatchers("/user/**").hasRole("USER")
                 .and()
                 .formLogin().loginPage("/login").defaultSuccessUrl("/user")
                 .and()
                 .logout().logoutUrl("/logout").logoutSuccessUrl("/login");
+
+        // 在 UsernamePasswordAuthenticationFilter 前添加 BeforeLoginFilter
+        http.addFilterBefore(new BeforeLoginFilter(), UsernamePasswordAuthenticationFilter.class);
+        // 在 CsrfFilter 后添加 AfterCsrfFilter
+        http.addFilterAfter(new AfterCsrfFilter(), CsrfFilter.class);
     }
 
     /**
@@ -42,14 +51,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(AuthenticationManagerBuilder builder) throws Exception {
-        builder.userDetailsService(anyUserDetailsServiceImpl).passwordEncoder(passwordEncoder());
-        builder.inMemoryAuthentication().withUser("aaa").password("aaa");
-        builder.inMemoryAuthentication().withUser("bbb").password("bbb");
-        builder.inMemoryAuthentication().withUser("ccc").password("ccc");
+        // 自定义校验
+        builder.userDetailsService(userDetailsServiceImpl).passwordEncoder(passwordEncoder());
+        // 基于内存校验
+//        builder.inMemoryAuthentication().withUser("aaa").password("aaa");
+//        builder.inMemoryAuthentication().withUser("bbb").password("bbb");
+//        builder.inMemoryAuthentication().withUser("ccc").password("ccc");
     }
 
     /**
-     * 密码加密
+     * 设置密码加密
      */
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
