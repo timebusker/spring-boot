@@ -38,7 +38,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>spring-boot</finalName>
+        <finalName>${project.name}</finalName>
         <!-- spring-boot-maven-plugin 提供了许多非常便捷的插件，它可以在classpath下收集很多的JAR包， 并能够建立一个独立可运行的JAR包，这让他能够非常方便的运行你的系统服务�?? spring-boot-maven-plugin插件
             搜索public static void main()方法标记为可运行的类。它提供内置的依赖解析器，用于设置版本号匹配Spring引导依赖�?? 你可以覆盖任何你想要的版本，但是它将默认为Boot的所选版本集 -->
         <plugins>
@@ -85,6 +85,7 @@
         <module>spring-boot-19-Definition-Starter</module>
         <module>spring-boot-20-Freemarker</module>
         <module>spring-boot-21-MultiDataSource</module>
+        <module>spring-boot-22-FarstPlus</module>
     </modules>
 
     <repositories>
