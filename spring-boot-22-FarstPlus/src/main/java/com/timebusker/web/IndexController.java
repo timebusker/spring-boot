@@ -7,8 +7,7 @@ import com.timebusker.common.R;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
@@ -27,16 +26,7 @@ public class IndexController extends AbstractController {
     @Autowired
     private Producer producer;
 
-    private static final String USER_ACCOUNT="admin";
-
-    /**
-     * 指定到登录页面
-     * @return
-     */
-    @RequestMapping(value = {"/","/index","/tologin"})
-    public String index(){
-        return "login";
-    }
+    private static final String USER_ACCOUNT = "admin";
 
     /**
      * 获取验证码
@@ -45,7 +35,7 @@ public class IndexController extends AbstractController {
      * @throws IOException
      */
     @RequestMapping("/authcode")
-    public void captcha() throws CommonException,IOException {
+    public void captcha() throws CommonException, IOException {
         response.setHeader("Cache-Control", "no-store, no-cache");
         response.setContentType("image/jpeg");
         //生成文字验证码
@@ -61,21 +51,32 @@ public class IndexController extends AbstractController {
     }
 
     /**
+     * 指定到登录页面
+     *
+     * @return
+     */
+    @RequestMapping(value = {"/"})
+    public String login() {
+        return "login";
+    }
+
+    /**
      * 登录
      */
-    @RequestMapping(value = "/login.do",method = RequestMethod.POST)
-    public Map<String, Object> login(String username, String password, String captcha)throws IOException {
-        String kaptcha = (String)session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
-        if(!captcha.equalsIgnoreCase(kaptcha)){
-            return R.error("验证码不正确");
-        }
-        if(!USER_ACCOUNT.equals(username)){
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    @ResponseBody
+    public Map<String, Object> login(String username, String password, String captcha) throws IOException {
+        String kaptcha = (String) session.getAttribute(Constants.KAPTCHA_SESSION_KEY);
+//        if(!captcha.equalsIgnoreCase(kaptcha)){
+//            return R.error("验证码不正确");
+//        }
+        if (!USER_ACCOUNT.equals(username)) {
             return R.error("账户不正确");
         }
-        if(USER_ACCOUNT.equals(password)){
+        if (!USER_ACCOUNT.equals(password)) {
             return R.error("密码不正确");
         }
-        session.setAttribute("USER_ACCOUNT",USER_ACCOUNT);
-        return  R.ok().put("token", USER_ACCOUNT);
+        session.setAttribute("USER_ACCOUNT", USER_ACCOUNT);
+        return R.ok().put("token", USER_ACCOUNT);
     }
 }

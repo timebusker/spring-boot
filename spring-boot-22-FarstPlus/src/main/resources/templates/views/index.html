@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
     <title>快速开发平台(企业版)</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -38,11 +38,9 @@
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
             </a>
-            <div style="float:left;color:#fff;padding:15px 10px;">欢迎 {{user.username}}</div>
+            <div style="float:left;color:#fff;padding:15px 10px;">欢迎 admin</div>
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <li><a href="javascript:;" @click="donate"><i class="fa fa-jpy"></i> &nbsp;捐赠作者</a></li>
-                    <li><a href="http://www.renren.io" target="_blank"><i class="fa fa-home"></i> &nbsp;编程教程</a></li>
                     <li><a href="javascript:;" @click="updatePassword"><i class="fa fa-lock"></i> &nbsp;修改密码</a></li>
                     <li><a href="javascript:;" @click="logout"><i class="fa fa-sign-out"></i> &nbsp;退出系统</a></li>
                 </ul>
@@ -61,7 +59,24 @@
             <ul class="sidebar-menu">
                 <li class="header">导航菜单</li>
                 <!-- vue生成的菜单 -->
-                <menu-item :item="item" :index="index" v-for="(item, index) in menuList"></menu-item>
+                <!-- <menu-item :item="item" :index="index" v-for="(item, index) in menuList"></menu-item>-->
+                <li class="">
+                    <a href="javascript:;"><i class="fa fa-cog"></i><span>系统管理</span><i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li class=""><a href="index.html#modules/sys/user.html"><i class="fa fa-user"></i> 管理员管理</a></li>
+                        <li class=""><a href="index.html#modules/sys/dept.html"><i class="fa fa-file-code-o"></i> 部门管理</a></li>
+                        <li class=""><a href="index.html#modules/sys/role.html"><i class="fa fa-user-secret"></i> 角色管理</a></li>
+                        <li class=""><a href="index.html#modules/sys/menu.html"><i class="fa fa-th-list"></i> 菜单管理</a></li>
+                        <li class=""><a href="index.html#druid/sql.html"><i class="fa fa-bug"></i> SQL监控</a></li>
+                        <li class=""><a href="index.html#modules/job/schedule.html"><i class="fa fa-tasks"></i> 定时任务</a></li>
+                        <li class=""><a href="index.html#modules/sys/config.html"><i class="fa fa-sun-o"></i> 参数管理</a></li>
+                        <li class=""><a href="index.html#modules/sys/log.html"><i class="fa fa-file-text-o"></i> 系统日志</a></li>
+                    </ul>
+                    <a href="javascript:;"><i class="fa fa-cog"></i><span>文件管理</span><i class="fa fa-angle-left pull-right"></i></a>
+                    <ul class="treeview-menu" style="display: none;">
+                        <li class=""><a href="index.html#/hdfs/hdfsapi.html"><i class="fa fa-file-image-o"></i> 文件上传</a></li>
+                    </ul>
+                </li>
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -79,8 +94,7 @@
 
         <!-- Main content -->
         <section class="content" style="background:#fff;">
-            <iframe scrolling="yes" frameborder="0"
-                    style="width:100%;min-height:200px;overflow:visible;background:#fff;" :src="main"></iframe>
+            <iframe scrolling="yes" frameborder="0" style="width:100%;min-height:200px;overflow:visible;background:#fff;" :src="main"></iframe>
         </section>
         <!-- /.content -->
     </div>
@@ -88,9 +102,9 @@
 
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
-            Version 1.1.0
+            Version 20160801
         </div>
-        Copyright &copy; 2017 <a href="http://www.renren.io" target="_blank">renren.io</a> All Rights Reserved
+        Copyright &copy; 2016 <a href="http://www.timebusker.top" target="_blank">timebusker.top</a> All Rights Reserved
     </footer>
 
     <!-- Add the sidebar's background. This div must be placed
