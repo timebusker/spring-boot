@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.*;
 
@@ -24,11 +25,37 @@ public abstract class AbstractController implements ApplicationContextAware {
     protected HttpServletResponse response;
     protected HttpSession session;
 
+    /**
+     * 在方法定义上使用@ModelAttribute
+     * 在SpringMVC调用任何方法前，被@ModelAttribute注解的方法都会先被依次调用，
+     * 并且这些注解方法的返回值都会被添加到模型中。
+     *
+     * @param request
+     * @param response
+     * @param session
+     */
     @ModelAttribute
-    public void before(HttpServletRequest request, HttpServletResponse response,HttpSession session){
+    public void before(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
         this.request = request;
         this.response = response;
         this.session = session;
+        if ((request.getRequestURI().indexOf("login") < 0 || request.getRequestURI().indexOf("authcode") < 0) && null == session.getAttribute("USER_ACCOUNT")) {
+            try {
+                this.login();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * 指定到登录页面
+     *
+     * @return
+     */
+    @RequestMapping(value = {"/"})
+    public String login() {
+        return "login";
     }
 
     /**

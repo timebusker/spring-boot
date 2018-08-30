@@ -51,16 +51,6 @@ public class IndexController extends AbstractController {
     }
 
     /**
-     * 指定到登录页面
-     *
-     * @return
-     */
-    @RequestMapping(value = {"/"})
-    public String login() {
-        return "login";
-    }
-
-    /**
      * 登录
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
