@@ -76,6 +76,10 @@ Spring Boot 项目旨在简化创建产品级的 Spring 应用和服务。你可
 
 #### 第二十一个模块：[................................Spring Boot多数据源配置使用原理](https://github.com/timebusker/spring-boot/tree/master/spring-boot-21-MultiDataSource/)
 
+#### 第二十二个模块：[................................Spring Boot基于Vue快速搭建Web管理系统](https://github.com/timebusker/spring-boot/tree/master/spring-boot-22-FarstPlus/)
+
+#### 第二十三个模块：[................................Spring Boot多种方式连接MongoDB操作](https://github.com/timebusker/spring-boot/tree/master/spring-boot-23-MongoDB/)
+
 ----  
 
 ### 关于Spring Boot模板引擎   
