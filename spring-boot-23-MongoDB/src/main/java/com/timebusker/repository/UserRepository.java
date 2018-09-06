@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author:timebusker
  * @date:2018/9/5
  */
-public interface UserRepository extends MongoRepository<UserEntity, String> {
+public interface UserRepository extends MongoRepository<UserEntity, Integer> {
 
     /*
      * MongoRepository与HibernateTemplete相似，提供一些基本的方法，
@@ -20,7 +20,7 @@ public interface UserRepository extends MongoRepository<UserEntity, String> {
 	 * findBy后面的属性名一定要在User类中存在，否则会报错
 	 */
 
-    UserEntity findById(int key);
+    UserEntity findById(Integer key);
 
-    void deleteById(int key);
+    void deleteById(Integer key);
 }
