@@ -93,10 +93,10 @@
 					<maxmem>512m</maxmem>
 					<!-- fork is enable,用于明确表示编译版本配置的可用 -->
 					<fork>true</fork>
-					<compilerVersion>1.3</compilerVersion>
+					<compilerVersion>1.8</compilerVersion>
 					<encoding>UTF-8</encoding>
 					<!-- 这个选项用来传递编译器自身不包含但是却支持的参数选项 -->
-					<compilerArgument>-verbose -bootclasspath ${java.home}\lib\rt.jar</compilerArgument>
+					<!--<compilerArgument>-verbose -bootclasspath ${java.home}\lib\rt.jar</compilerArgument>-->
 				</configuration>
 			</plugin>
 		</plugins>

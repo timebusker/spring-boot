@@ -41,8 +41,8 @@
             <div style="float:left;color:#fff;padding:15px 10px;">欢迎 admin</div>
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <li><a href="javascript:;" @click="updatePassword"><i class="fa fa-lock"></i> &nbsp;修改密码</a></li>
-                    <li><a href="javascript:;" @click="logout"><i class="fa fa-sign-out"></i> &nbsp;退出系统</a></li>
+                    <li><a href="javascript:;"><i class="fa fa-lock"></i> &nbsp;修改密码</a></li>
+                    <li><a href="javascript:;"><i class="fa fa-sign-out"></i> &nbsp;退出系统</a></li>
                 </ul>
             </div>
         </nav>
@@ -60,21 +60,21 @@
                 <li class="header">导航菜单</li>
                 <!-- vue生成的菜单 -->
                 <!-- <menu-item :item="item" :index="index" v-for="(item, index) in menuList"></menu-item>-->
-                <li class="">
+                <li class="" id="all_memu">
                     <a href="javascript:;"><i class="fa fa-cog"></i><span>系统管理</span><i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu" style="display: none;">
-                        <li class=""><a href="index.html#modules/sys/user.html"><i class="fa fa-user"></i> 管理员管理</a></li>
-                        <li class=""><a href="index.html#modules/sys/dept.html"><i class="fa fa-file-code-o"></i> 部门管理</a></li>
-                        <li class=""><a href="index.html#modules/sys/role.html"><i class="fa fa-user-secret"></i> 角色管理</a></li>
-                        <li class=""><a href="index.html#modules/sys/menu.html"><i class="fa fa-th-list"></i> 菜单管理</a></li>
-                        <li class=""><a href="index.html#druid/sql.html"><i class="fa fa-bug"></i> SQL监控</a></li>
-                        <li class=""><a href="index.html#modules/job/schedule.html"><i class="fa fa-tasks"></i> 定时任务</a></li>
-                        <li class=""><a href="index.html#modules/sys/config.html"><i class="fa fa-sun-o"></i> 参数管理</a></li>
-                        <li class=""><a href="index.html#modules/sys/log.html"><i class="fa fa-file-text-o"></i> 系统日志</a></li>
+                        <li class=""><a href="#modules/sys/user.html"><i class="fa fa-user"></i> 管理员管理</a></li>
+                        <li class=""><a href="#modules/sys/dept.html"><i class="fa fa-file-code-o"></i> 部门管理</a></li>
+                        <li class=""><a href="#modules/sys/role.html"><i class="fa fa-user-secret"></i> 角色管理</a></li>
+                        <li class=""><a href="#modules/sys/menu.html"><i class="fa fa-th-list"></i> 菜单管理</a></li>
+                        <li class=""><a href="#modules/druid/sql.html"><i class="fa fa-bug"></i> SQL监控</a></li>
+                        <li class=""><a href="#modules/job/schedule.html"><i class="fa fa-tasks"></i> 定时任务</a></li>
+                        <li class=""><a href="#modules/sys/config.html"><i class="fa fa-sun-o"></i> 参数管理</a></li>
+                        <li class=""><a href="#modules/sys/log.html"><i class="fa fa-file-text-o"></i> 系统日志</a></li>
                     </ul>
                     <a href="javascript:;"><i class="fa fa-folder"></i><span>文件管理</span><i class="fa fa-angle-left pull-right"></i></a>
                     <ul class="treeview-menu" style="display: none;">
-                        <li class=""><a href="hdfs/hdfsapi.html"><i class="fa fa-folder-open-o"></i> 文件上传</a></li>
+                        <li class=""><a href="#hdfs/hdfsapi.html"><i class="fa fa-folder-open-o"></i> 文件上传</a></li>
                     </ul>
                 </li>
             </ul>
@@ -110,30 +110,6 @@
     <!-- Add the sidebar's background. This div must be placed
          immediately after the control sidebar -->
     <div class="control-sidebar-bg"></div>
-
-    <!-- 修改密码 -->
-    <div id="passwordLayer" style="display: none;">
-        <form class="form-horizontal">
-            <div class="form-group">
-                <div class="form-group">
-                    <div class="col-sm-2 control-label">账号</div>
-                    <span class="label label-success" style="vertical-align: bottom;">{{user.username}}</span>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-2 control-label">原密码</div>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" v-model="password" placeholder="原密码"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-2 control-label">新密码</div>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" v-model="newPassword" placeholder="新密码"/>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
 
 </div>
 <!-- ./wrapper -->
