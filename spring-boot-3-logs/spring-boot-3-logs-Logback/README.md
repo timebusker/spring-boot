@@ -74,4 +74,34 @@
 </configuration>
 ```
 	
-----
+----   
+
+```$xslt
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 开发环境 -->
+	<springProfile name="dev">
+		<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+			<encoder>
+				<pattern>%date [%thread] %-5level %logger{80} || %msg%n</pattern>
+			</encoder>
+		</appender>
+		<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+			<file>/logs/timebusker.log</file>
+			<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+				<fileNamePattern>/logs/timebusker-%d{yyyy-MM-dd}.log</fileNamePattern>
+				<maxHistory>30</maxHistory>
+			</rollingPolicy>
+			<encoder><!-- 必须指定，否则不会往文件输出内容 -->
+				<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{5} - %msg%n</pattern>
+			</encoder>
+			<append>false</append>
+			<prudent>false</prudent>
+		</appender>
+		<root level="info">
+			<appender-ref ref="CONSOLE" />
+			<appender-ref ref="FILE" />
+		</root>
+	</springProfile>
+</configuration>
+```
