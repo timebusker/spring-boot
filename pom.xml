@@ -87,6 +87,8 @@
         <module>spring-boot-21-MultiDataSource</module>
         <module>spring-boot-22-FarstPlus</module>
         <module>spring-boot-23-MongoDB</module>
+        <module>spring-boot-13-MyBatis-XML</module>
+        <module>spring-boot-24-WebSocket</module>
     </modules>
 
     <repositories>
