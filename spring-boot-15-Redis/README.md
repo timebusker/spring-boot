@@ -10,7 +10,7 @@
 
 - #### [Redis.....................简单使用](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-sample/)
 
-- ##### [Redis.....................Cache](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-cache)
+- #### [Redis.....................Cache](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-cache)
 
 - #### [Redis.....................Session](https://github.com/timebusker/spring-boot/tree/master/spring-boot-15-Redis/spring-boot-15-Redis-session)
 
