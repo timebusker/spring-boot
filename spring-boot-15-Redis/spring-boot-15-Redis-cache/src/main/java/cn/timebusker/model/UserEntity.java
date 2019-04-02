@@ -6,7 +6,13 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @DESC:UserEntity:人员信息实体类
+ * @DESC:UserEntity:人员信息实体类：
+ *
+ * 要缓存的 Java 对象必须实现 Serializable 接口，因为 Spring 会将对象先序列化再存入 Redis，不实现 Serializable 的话将会遇到类似这种错误：
+ * nested exception is java.lang.IllegalArgumentException
+ *
+ * 实现Comparable接口可以完成集合排序功能
+ *
  * @author:timebusker
  * @date:2019/4/1
  */

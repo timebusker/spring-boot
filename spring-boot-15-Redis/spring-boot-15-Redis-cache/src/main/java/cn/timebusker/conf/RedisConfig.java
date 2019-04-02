@@ -53,7 +53,7 @@ public class RedisConfig extends CachingConfigurerSupport {
     }
 
     /**
-     * 设置序列化工具
+     * 缓存数据时value序列化策略
      * @param template
      */
     private void setSerializer(StringRedisTemplate template){
