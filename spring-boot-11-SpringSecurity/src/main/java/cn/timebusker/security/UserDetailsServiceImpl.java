@@ -13,12 +13,9 @@ import java.util.List;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
-    private final UserService userService;
-
     @Autowired
-    UserDetailsServiceImpl(UserService userService) {
-        this.userService = userService;
-    }
+    private UserService userService;
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

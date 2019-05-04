@@ -1,4 +1,4 @@
-package cn.timebusker.constant;
+package cn.timebusker.security.constant;
 
 public interface RoleConstant {
 

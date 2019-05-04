@@ -18,7 +18,7 @@ import java.util.List;
 public class AuthoRoleController {
 
     // 基于角色权限校验
-    @PreAuthorize("hasRole('ROLE_USER')")
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @RequestMapping("/authRole")
     public String role() {
         return "admin auth";

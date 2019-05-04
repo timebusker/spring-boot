@@ -1,10 +1,14 @@
 package cn.timebusker.model;
 
-import lombok.Data;
+import javax.persistence.*;
+import java.io.Serializable;
 
-@Data
-public class UserEntity {
+@Entity
+@Table(name = "tb_user")
+public class UserEntity implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     /**

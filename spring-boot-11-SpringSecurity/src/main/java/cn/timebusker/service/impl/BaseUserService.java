@@ -1,6 +1,6 @@
 package cn.timebusker.service.impl;
 
-import cn.timebusker.constant.RoleConstant;
+import cn.timebusker.security.constant.RoleConstant;
 import cn.timebusker.mapper.UserMapper;
 import cn.timebusker.model.UserEntity;
 import cn.timebusker.service.UserService;
@@ -16,19 +16,20 @@ public class BaseUserService implements UserService {
 
     private final UserMapper userMapper;
 
-    public BaseUserService(UserMapper userMapper){
+    public BaseUserService(UserMapper userMapper) {
         this.userMapper = userMapper;
     }
 
     @Override
     public boolean insert(UserEntity userEntity) {
         String username = userEntity.getUsername();
-        if (exist(username))
+        if (exist(username)) {
             return false;
+        }
         encryptPassword(userEntity);
         userEntity.setRoles(RoleConstant.ROLE_USER);
         int result = userMapper.insert(userEntity);
-        return  result == 1;
+        return result == 1;
     }
 
     @Override
@@ -38,10 +39,11 @@ public class BaseUserService implements UserService {
 
     /**
      * 判断用户是否存在
+     *
      * @param username 账号
      * @return 密码
      */
-    private boolean exist(String username){
+    private boolean exist(String username) {
         UserEntity userEntity = userMapper.selectByUsername(username);
         return (userEntity != null);
     }
@@ -49,7 +51,7 @@ public class BaseUserService implements UserService {
     /**
      * 加密密码
      */
-    private void encryptPassword(UserEntity userEntity){
+    private void encryptPassword(UserEntity userEntity) {
         String password = userEntity.getPassword();
         password = new BCryptPasswordEncoder().encode(password);
         userEntity.setPassword(password);

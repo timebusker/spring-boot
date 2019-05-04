@@ -1,7 +1,7 @@
 package cn.timebusker.security;
 
-import cn.timebusker.filter.AfterCsrfFilter;
-import cn.timebusker.filter.BeforeLoginFilter;
+import cn.timebusker.security.filter.AfterCsrfFilter;
+import cn.timebusker.security.filter.BeforeLoginFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -15,12 +15,8 @@ import org.springframework.security.web.csrf.CsrfFilter;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private UserDetailsServiceImpl userDetailsServiceImpl;
-
     @Autowired
-    public void setAnyUserDetailsServiceImpl(UserDetailsServiceImpl userDetailsServiceImpl) {
-        this.userDetailsServiceImpl = userDetailsServiceImpl;
-    }
+    private UserDetailsServiceImpl userDetailsServiceImpl;
 
     /**
      * 匹配 "/" 路径，不需要权限即可访问
@@ -66,5 +62,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
 }
