@@ -646,3 +646,27 @@ protected void configure(HttpSecurity http) throws Exception {
 在 atFilter 相同位置添加 filter， 此 filter 不覆盖 filter
 
 > 通过在不同 `Filter` 的 `doFilter()` 方法中加断点调试，可以判断哪个 filter 先执行，从而判断 filter 的执行顺序 。
+
+
+### [基于URL动态权限n种方案](https://mp.weixin.qq.com/s/Vm9VR-IzHKrVfnpFRax1Hw)
+
+之前的版本的用户的权限需要使用@PreAuthorize硬编码，那么无法动态的进行权限的配置了，本节基于URL实现动态权限配置方案分析。
+
+#### [扩展access()的SpEL表达式](https://mp.weixin.qq.com/s/PX9bXMfZDsobj58sv2jbng)
+![Spring Security 登录流程.jpg](/timebusker/timebusker.github.io/master/img/spring-security/7.jpg)
+
+#### [自定义AccessDecisionManager](https://mp.weixin.qq.com/s/ST8Y3gKPxfvvaRXvflTETA)
+
+>（1）自定义SecurityMetadataSource，实现从数据库加载ConfigAttribute。
+
+>（2） 自定义accessDecisionManager： 进行权限校验。
+
+>（3）使用withObjectPostProcessor：自定SecurityMetadataSource和accessDecisionManager。
+
+#### [自定义Filter](https://mp.weixin.qq.com/s/f7GoMtaExDHVm0dx8r1AEA)
+
+> （1）需要提供认证数据规则源数据：通过实现接口FilterInvocationSecurityMetadataSource来进行实现。
+
+> （2）自定义accessDecisionManager：进行权限校验。
+
+> （3）自定义一个拦截器然后把它添加到springsecurity的filterChain中。

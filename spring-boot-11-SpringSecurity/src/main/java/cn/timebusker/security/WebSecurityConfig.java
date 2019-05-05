@@ -29,6 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
+                // 设置白名单
                 .antMatchers("/", "/header.html").permitAll()
                 .antMatchers("/user/**").hasRole("USER")
                 .and()

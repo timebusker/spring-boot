@@ -17,6 +17,12 @@ import java.util.List;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class AuthoRoleController {
 
+    /**
+     * 基于方法使用注解，可以结合Spring EL表达式细粒度的权限
+     * <p>
+     * 更安全
+     */
+
     // 基于角色权限校验
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @RequestMapping("/authRole")
@@ -24,7 +30,7 @@ public class AuthoRoleController {
         return "admin auth";
     }
 
-    // 匹配校验（执行前校验，执行后校验）
+    // 匹配校验（执行前校验(PreAuthorize)，执行后校验(PostAuthorize)）
     @PreAuthorize("#id<10 and principal.username.equals(#username) and #user.username.equals('abc')")
     @PostAuthorize("returnObject%2==0")
     @RequestMapping("/grep")
