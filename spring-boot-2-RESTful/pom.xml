@@ -64,9 +64,4 @@
 			<artifactId>fastjson</artifactId>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<finalName>spring-boot-2-RESTful</finalName>
-	</build>
-
 </project>
