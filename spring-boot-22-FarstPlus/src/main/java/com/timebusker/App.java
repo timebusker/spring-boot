@@ -9,10 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date:2018/8/22
  */
 @SpringBootApplication
-public class Application {
+public class App {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class);
+        SpringApplication.run(App.class);
         System.err.println("\n**************************************\n");
         System.err.println("\t\t\t服务启动成功...");
         System.err.println("\n**************************************\n");

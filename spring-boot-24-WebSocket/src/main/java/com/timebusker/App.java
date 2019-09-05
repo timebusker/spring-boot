@@ -5,5 +5,5 @@ package com.timebusker;
  * @author:timebusker
  * @date:2018/10/30
  */
-public class Application {
+public class App {
 }

@@ -12,7 +12,7 @@ public interface UserService {
 	 * @param id
 	 * @return
 	 */
-	public User findUserById(long id);
+	public User findUserById(Long id);
 
 	/**
 	 * 查询所有用户
@@ -34,5 +34,5 @@ public interface UserService {
 	 * 
 	 * @param id
 	 */
-	public void deleteUserById(long id);
+	public void deleteUserById(Long id);
 }
