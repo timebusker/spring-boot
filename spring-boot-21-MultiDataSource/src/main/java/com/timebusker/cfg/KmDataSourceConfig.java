@@ -2,9 +2,9 @@ package com.timebusker.cfg;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.autoconfigure.orm.jpa.JpaProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -48,7 +48,7 @@ public class KmDataSourceConfig {
         return builder
                 .dataSource(kmDataSource)
                 .packages("com.timebusker.entity.km")
-                .properties(jpaProperties.getHibernateProperties(kmDataSource))
+                .properties(jpaProperties.)
                 .persistenceUnit("test")
                 .build();
     }
