@@ -10,4 +10,4 @@ set t=%time:~0,8%
 set m="springboot版本升级到2.1.3"
 git add .
 git commit -am"%d% %t% ____ %var% %m%"
-git push  origin master
+git push origin master
