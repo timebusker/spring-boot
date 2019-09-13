@@ -60,10 +60,12 @@ public class DemoInfoDAO {
 	private List<DemoInfo> getListDemoInfo(Map<String, DemoInfo> map) {
 		Set<String> set = map.keySet();
 		List<DemoInfo> list = new ArrayList<DemoInfo>();
-		for (String string : set) {
-			DemoInfo demo = map.get(string);
-			list.add(demo);
-		}
+    synchronized(map) {
+	    for (String string : set) {
+	      DemoInfo demo = map.get(string);
+	      list.add(demo);
+	    }
+    }
 		return list;
 	}
 }
