@@ -21,7 +21,7 @@ import cn.timebusker.entity.UserInfo;
 @Mapper
 public interface UserInfoMapper {
 
-	@Select("SELECT * FROM user_info WHERE username = #{name}")
+		@Select("SELECT * FROM user_info WHERE username = #{name}")
 	List<UserInfo> findByName(@Param("name") String name);
 
 	@Select("SELECT * FROM user_info WHERE id = #{id}")
