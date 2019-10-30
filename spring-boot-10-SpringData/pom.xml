@@ -67,9 +67,21 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>mysql</groupId>-->
+<!--			<artifactId>mysql-connector-java</artifactId>-->
+<!--		</dependency>-->
+
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
+			<groupId>com.alibaba</groupId>
+			<artifactId>easyexcel</artifactId>
+			<version>2.1.0-beta4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.8</version>
 		</dependency>
 
 		<dependency>
